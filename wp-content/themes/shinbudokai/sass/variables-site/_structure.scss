@@ -1,0 +1,60 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+$space: 16px;
+$space-double: $space * 2;
+$space-half: $space / 2;
+$space-quarter: $space / 4;
+
+$header_border-height: 6px;
+$sidebar_border-width: 10px;
+
+// DESKTOP
+// 1200 total
+// 60 gutter || 1080 width || 60 gutter
+$desktop__gutter: 3%;
+$desktop__width: 100 - $desktop__gutter * 2;
+$desktop__gutter_full: $desktop__gutter / 100 * 10 + $desktop__gutter;
+$desktop__width_full: 100 + $desktop__gutter_full * 2;
+$desktop__banner_height_max: 415px;
+$desktop__banner_height_min: 415px;
+
+// TABLET
+// 768 total
+// 30 gutter || 708 width || 30 gutter
+// ~4.2%
+$tablet__gutter: 4.2%;
+$tablet__width: (100 - $tablet__gutter * 2);
+$tablet__gutter_full: $tablet__gutter / 100 * 10 + $tablet__gutter;
+$tablet__width_full: 100 + $tablet__gutter_full * 2;
+$tablet__banner_height_max: 415px;
+$tablet__banner_height_min: 415px;
+
+// MOBILE LARGE
+// 550 total
+// 20 gutter || 510 width || 20 gutter 
+$mobile_large__gutter: 3.9%;
+$mobile_large__width: (100 - $mobile_large__gutter * 2);
+$mobile_large__gutter_full: $mobile_large__gutter / 100 * 10 + $mobile_large__gutter;
+$mobile_large__width_full: 100 + $mobile_large__gutter_full * 2;
+$mobile_large__banner_height_max: 400px;
+$mobile_large__banner_height_min: 400px;
+
+// MOBILE SMALL
+// 320 total
+// 10 gutter || 300 width || 10 gutter 
+$mobile_small__gutter: 3.3%;
+$mobile_small__width: (100 - $mobile_small__gutter * 2);
+$mobile_small__gutter_full: $mobile_small__gutter / 100 * 10 + $mobile_small__gutter;
+$mobile_small__width_full: 100 + $mobile_small__gutter_full * 2;
+$mobile_small__banner_height_max: 450px;
+$mobile_small__banner_height_min: 450px;
+
+
+$desktop__max: 1200px;
+$desktop__min: 769px;
+$tablet__max: 768px;
+$tablet__min: 551px;
+$mobile_large__max: 550px;
+$mobile_large__min: 321px;
+$mobile_small__max: 320px;

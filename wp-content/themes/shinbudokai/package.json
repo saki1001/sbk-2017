@@ -1,0 +1,29 @@
+{
+  "name": "evercore",
+  "version": "1.0.0",
+  "description": "WordPress Site",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1",
+    "susy": "^2.2.12"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  },
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saki1001/sbk-2017.git"
+  },
+  "author": "rayogram",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/saki1001/sbk-2017/issues"
+  },
+  "homepage": "https://github.com/saki1001/sbk-2017#readme"
+}

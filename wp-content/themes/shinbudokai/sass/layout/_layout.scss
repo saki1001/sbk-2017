@@ -1,0 +1,192 @@
+// Importing Susy
+@import "../../bower_components/susy/sass/susy";
+
+// Configuring Susy Defaults
+$susy: (
+  columns: 4, 
+  gutters: 0.15, // based on 66px to 10px gutter
+  debug: (image: show-columns),
+  global-box-sizing: border-box,
+  use-custom: (rem: true)
+);
+
+
+@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
+	$susy: (
+	  columns: 6, 
+	  gutters: 0.13, // based on 76px to 10px gutter
+	);
+}
+
+@media screen and (max-width: $tablet__max) {
+	$susy: (
+	  columns: 12, 
+	  gutters: 0.22, // based on 50px to 11px gutter
+	);
+}
+
+@media screen and (min-width: $desktop__min) {
+	$susy: (
+	  columns: 16, 
+	  gutters: 0.17, // based on 58px to 10px gutter
+	);
+}
+
+@include border-box-sizing;
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+/*--------------------------------------------------------------
+# Main Containers
+--------------------------------------------------------------*/
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+#header,
+#content,
+#footer {
+	width: 100%;
+}
+
+#header .inner,
+#content,
+#footer .inner {
+	max-width: $desktop__max;
+	margin: 0 auto;	
+	padding: 0 $space;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {}
+
+@media screen and (max-width: $mobile_small__max) {
+	#header .inner {
+		@include show-grid(4);
+	}
+	.site-branding {
+		@include span(2 of 4);
+	}
+
+	.main-navigation {
+		@include span(2 of 4 last);
+	}
+}
+
+@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
+	#header .inner {
+		@include show-grid(6);
+	}
+
+	.site-branding {
+		@include span(3 of 6);
+	}
+
+	.main-navigation {
+		@include span(3 of 6 last);
+	}
+}
+
+@media screen and (min-width: $tablet__min) {
+	#header .inner {
+		@include show-grid(12);
+	}
+
+	.site-branding {
+		@include span(3 of 12);
+	}
+
+	.main-navigation {
+		@include span(9 of 12 last);
+
+		ul {
+			float: right;
+
+			li {
+				margin-right: $space;
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+# Main Content / Banner
+--------------------------------------------------------------*/
+#content {
+	@include show-grid(8);
+	position: relative;
+}
+
+#banner {
+	position: relative;
+}
+
+#main {
+	min-height: 400px;
+}
+
+
+@media screen and (max-width: $mobile_small__max) {
+
+}
+
+@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
+
+}
+
+@media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
+
+}
+
+@media screen and (min-width: $desktop__min) {
+	#primary {
+		@include span(5 of 8);
+	}
+
+	#secondary {
+		@include span(3 of 8 last);
+	}
+}
+
+@media screen and (min-width: $desktop__max) {
+	#banner {
+		.image {
+			width: 100%;
+			left: 0;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {}
+
+@media screen and (max-width: $tablet__max) {
+	#footer {
+		// padding-left: $tablet__gutter;
+		// padding-right: $tablet__gutter;
+	}
+}
+@media screen and (min-width: $desktop__min) {
+	#footer {
+		// padding-left: $desktop__gutter;
+		// padding-right: $desktop__gutter;
+	}
+}
+
+@media screen and (min-width: $desktop__max) {
+	#footer {
+		// width: 80%;
+		// margin: 0 auto;
+	}
+}

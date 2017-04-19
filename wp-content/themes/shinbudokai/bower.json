@@ -1,0 +1,21 @@
+{
+  "name": "evercore",
+  "description": "Evercore Wordpress",
+  "main": "index.php",
+  "authors": [
+    "rayogram"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/saki1001/sbk-2017",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "^2.2.12"
+  }
+}

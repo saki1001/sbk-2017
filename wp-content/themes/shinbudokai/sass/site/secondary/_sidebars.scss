@@ -1,0 +1,16 @@
+#secondary {
+	margin-top: $space-double;
+
+	.sidebar {
+		background: $gray;
+		border-right: solid $red $sidebar_border-width;
+		border-bottom: solid $red $sidebar_border-width;
+		padding: $space $space-double $space-double;
+		margin-bottom: $space;
+
+		&:nth-child(even) {
+			border-right: solid $green $sidebar_border-width;
+			border-bottom: solid $green $sidebar_border-width;
+		}
+	}
+}

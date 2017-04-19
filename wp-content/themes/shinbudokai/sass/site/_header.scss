@@ -1,0 +1,31 @@
+#header {
+	background-color: $gray;
+	border-bottom: solid 6px $medGray;
+
+	.inner {
+		padding-top: $space;
+		padding-bottom: $space;
+		position: relative;
+
+		&:after {
+		  @include clearfix;
+		  @include clearfix-after;
+		}
+	}
+
+	.site-title {
+		font-size: 0;
+		margin: 0;
+	}
+}
+
+
+@media screen and (min-width: $tablet__min) {
+	#header {
+		.main-navigation {
+			position: absolute;
+			right: 0;
+			bottom: -$header_border-height;
+		}
+	}
+}
