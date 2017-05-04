@@ -1,9 +1,4 @@
 .main-navigation {
-	// clear: both;
-	// display: block;
-	// float: left;
-	// width: 100%;
-
 	ul {
 		display: none;
 		list-style: none;
@@ -63,20 +58,18 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		border-bottom: solid $medGray $header_border-height;
-		padding-bottom: $space;
+		padding: ($space+$header_border-height*2) $space $space $space;
 		display: block;
-
-		&:hover {
-			color: $darkGray;
-			border-bottom: solid $red $header_border-height;
-		}
 	}
 
+	a:hover,
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		color: $darkGray;
 		border-bottom: solid $red $header_border-height;
+		background: $lightGray;
 	}
 }
 

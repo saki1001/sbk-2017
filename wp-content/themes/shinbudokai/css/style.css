@@ -41,7 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:regular,bold,italic|Noto+Serif:regular");
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -234,8 +234,16 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h2, h3 {
+  margin-bottom: 8px; }
+
+h3 {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700; }
+
 p {
-  margin-bottom: 1.5em; }
+  margin-top: 8px;
+  margin-bottom: 32px; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -263,7 +271,7 @@ code, kbd, tt, var {
   font-size: 0.9375rem; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #777;
   cursor: help; }
 
 mark, ins {
@@ -342,12 +350,6 @@ html, body {
     margin-right: 0; } }
 
 @media screen and (min-width: 551px) {
-  #header .inner {
-    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 86.9565217391%, transparent 86.9565217391%);
-    background-size: 8.4249084249%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top; }
   .site-branding {
     width: 24.1758241758%;
     float: left;
@@ -357,9 +359,13 @@ html, body {
     float: right;
     margin-right: 0; }
     .main-navigation ul {
-      float: right; }
-      .main-navigation ul li {
-        margin-right: 16px; } }
+      float: right; } }
+
+@media screen and (min-width: 551px) {
+  #header .main-navigation {
+    position: absolute;
+    right: 16px;
+    bottom: -6px; } }
 
 /*--------------------------------------------------------------
 # Main Content / Banner
@@ -379,12 +385,18 @@ html, body {
   min-height: 400px; }
 
 @media screen and (min-width: 769px) {
+  #content {
+    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 86.9565217391%, transparent 86.9565217391%);
+    background-size: 6.301369863%;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-position: left top; }
   #primary {
-    width: 61.8784530387%;
+    width: 55.8904109589%;
     float: left;
-    margin-right: 1.6574585635%; }
+    margin-right: 0.8219178082%; }
   #secondary {
-    width: 36.4640883978%;
+    width: 36.9863013699%;
     float: right;
     margin-right: 0; } }
 
@@ -503,8 +515,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color: #777;
+  border: 1px solid #DDD;
   border-radius: 3px;
   padding: 3px; }
   input[type="text"]:focus,
@@ -523,10 +535,10 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #404040; }
 
 select {
-  border: 1px solid #ccc; }
+  border: 1px solid #DDD; }
 
 textarea {
   width: 100%; }
@@ -538,11 +550,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #777; }
   a:visited {
-    color: purple; }
+    color: #777; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #dd624c; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -580,21 +592,21 @@ a {
   position: relative; }
 
 .main-navigation a {
-  color: #111;
+  color: #404040;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: solid #999 6px;
-  padding-bottom: 16px;
+  border-bottom: solid #777 6px;
+  padding: 28px 16px 16px 16px;
   display: block; }
-  .main-navigation a:hover {
-    color: #333;
-    border-bottom: solid #dd624c 6px; }
 
+.main-navigation a:hover,
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-  border-bottom: solid #dd624c 6px; }
+  color: #333;
+  border-bottom: solid #dd624c 6px;
+  background: #e6e6e6; }
 
 /* Small menu. */
 .menu-toggle,
@@ -714,25 +726,22 @@ a {
 --------------------------------------------------------------*/
 #header {
   background-color: #DDD;
-  border-bottom: solid 6px #999; }
+  border-bottom: solid 6px #777; }
   #header .inner {
-    padding-top: 16px;
-    padding-bottom: 16px;
     position: relative; }
     #header .inner:after {
       content: "";
       display: table;
       table-layout: fixed;
       clear: both; }
-  #header .site-title {
+  #header .site-branding .site-title {
     font-size: 0;
     margin: 0; }
-
-@media screen and (min-width: 551px) {
-  #header .main-navigation {
-    position: absolute;
-    right: 0;
-    bottom: -6px; } }
+    #header .site-branding .site-title a {
+      padding: 16px 16px 16px 0;
+      display: block; }
+      #header .site-branding .site-title a:hover {
+        background-color: #e6e6e6; }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -759,6 +768,15 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+.home #main {
+  margin-bottom: 32px; }
+  .home #main h2 {
+    font-family: "Noto Serif", sans-serif;
+    color: #777;
+    margin-bottom: 32px; }
+  .home #main p {
+    margin-top: 0; }
 
 /*--------------------------------------------------------------
 ## Sidebar

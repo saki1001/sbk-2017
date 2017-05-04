@@ -19,6 +19,9 @@ while ( have_posts() ) : the_post();
 	if ( is_front_page() ) :
 		get_template_part( 'template-parts/content', 'home' );
 
+	elseif ( is_page('classes') ) :
+		get_template_part( 'template-parts/content', 'classes' );
+
 	else :
 			get_template_part( 'template-parts/content', 'page' );
 

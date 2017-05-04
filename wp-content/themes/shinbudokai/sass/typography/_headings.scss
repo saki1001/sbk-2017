@@ -1,3 +1,12 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
+h2, h3 {
+	margin-bottom: $space-half;
+}
+
+h3 {
+	font-family: $font__main;
+	font-weight: 700;
+}

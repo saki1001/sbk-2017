@@ -3,8 +3,6 @@
 	border-bottom: solid 6px $medGray;
 
 	.inner {
-		padding-top: $space;
-		padding-bottom: $space;
 		position: relative;
 
 		&:after {
@@ -13,19 +11,19 @@
 		}
 	}
 
-	.site-title {
-		font-size: 0;
-		margin: 0;
-	}
-}
+	.site-branding {
+		.site-title {
+			font-size: 0;
+			margin: 0;
 
+			a {
+				padding: $space $space $space 0;
+				display: block;
 
-@media screen and (min-width: $tablet__min) {
-	#header {
-		.main-navigation {
-			position: absolute;
-			right: 0;
-			bottom: -$header_border-height;
+				&:hover {
+					background-color: $lightGray;
+				}
+			}
 		}
 	}
 }

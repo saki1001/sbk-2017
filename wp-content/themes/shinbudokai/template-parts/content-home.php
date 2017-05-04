@@ -28,27 +28,22 @@
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<aside id="secondary" class="widget-area" role="complementary">
+	<aside id="secondary" class="widget-area" role="complementary">
 	
-	<div class="sidebar schedule">
-		<h3>Today’s Schedule</h3>
-		<p>
-			Aikido 6 - 7pm <br>
-			Taught by Shizuo Imaizumi
-		</p>
+		<div class="sidebar schedule">
+			<?php
+				$topBox = get_field('sidebar_top_box');
 
-		<p>
-			Weapons 7 - 8pm <br>
-			Taught by Shizuo Imaizumi
-		</p>
-	</div>
+				print $topBox;
+			?>
+		</div>
 
-	<div class="sidebar second visit">
-		<?php
-			$bottomBox = get_field('sidebar_bottom_box');
+		<div class="sidebar second visit">
+			<?php
+				$bottomBox = get_field('sidebar_bottom_box');
 
-			print $bottomBox;
-		?>
-	</div>
+				print $bottomBox;
+			?>
+		</div>
 
-</aside><!-- #secondary -->
+	</aside><!-- #secondary -->

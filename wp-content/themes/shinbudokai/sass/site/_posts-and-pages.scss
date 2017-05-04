@@ -1,0 +1,44 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.home {
+	#main {
+		margin-bottom: $space-double;
+
+		h2 {
+			font-family: $font__header;
+			color: $medGray;
+			margin-bottom: $space-double;
+		}
+
+		p {
+			margin-top: 0;
+		}
+	}
+}

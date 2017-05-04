@@ -96,7 +96,7 @@ html, body {
 
 @media screen and (min-width: $tablet__min) {
 	#header .inner {
-		@include show-grid(12);
+		// @include show-grid(12);
 	}
 
 	.site-branding {
@@ -108,10 +108,16 @@ html, body {
 
 		ul {
 			float: right;
+		}
+	}
+}
 
-			li {
-				margin-right: $space;
-			}
+@media screen and (min-width: $tablet__min) {
+	#header {
+		.main-navigation {
+			position: absolute;
+			right: $space;
+			bottom: -$header_border-height;
 		}
 	}
 }
@@ -147,12 +153,16 @@ html, body {
 }
 
 @media screen and (min-width: $desktop__min) {
+	#content {
+		@include show-grid(16);
+	}
+
 	#primary {
-		@include span(5 of 8);
+		@include span(9 of 16);
 	}
 
 	#secondary {
-		@include span(3 of 8 last);
+		@include span(6 of 16 last);
 	}
 }
 
