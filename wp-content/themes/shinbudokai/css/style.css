@@ -318,44 +318,32 @@ html, body {
 # Header
 --------------------------------------------------------------*/
 @media screen and (max-width: 320px) {
-  #header .inner {
-    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 86.9565217391%, transparent 86.9565217391%);
-    background-size: 25.8426966292%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top; }
   .site-branding {
-    width: 48.3146067416%;
+    width: 48.1152993348%;
     float: left;
-    margin-right: 3.3707865169%; }
+    margin-right: 3.7694013304%; }
   .main-navigation {
-    width: 48.3146067416%;
+    width: 48.1152993348%;
     float: right;
     margin-right: 0; } }
 
 @media screen and (min-width: 321px) and (max-width: 550px) {
-  #header .inner {
-    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 86.9565217391%, transparent 86.9565217391%);
-    background-size: 17.037037037%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top; }
   .site-branding {
-    width: 48.8888888889%;
+    width: 48.7591240876%;
     float: left;
-    margin-right: 2.2222222222%; }
+    margin-right: 2.4817518248%; }
   .main-navigation {
-    width: 48.8888888889%;
+    width: 48.7591240876%;
     float: right;
     margin-right: 0; } }
 
 @media screen and (min-width: 551px) {
   .site-branding {
-    width: 24.1758241758%;
+    width: 24.0807498198%;
     float: left;
-    margin-right: 1.0989010989%; }
+    margin-right: 1.225666907%; }
   .main-navigation {
-    width: 74.7252747253%;
+    width: 74.6935832733%;
     float: right;
     margin-right: 0; }
     .main-navigation ul {
@@ -371,32 +359,24 @@ html, body {
 # Main Content / Banner
 --------------------------------------------------------------*/
 #content {
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 86.9565217391%, transparent 86.9565217391%);
-  background-size: 12.7071823204%;
-  background-origin: content-box;
-  background-clip: content-box;
-  background-position: left top;
   position: relative; }
 
 #banner {
   position: relative; }
 
+#primary {
+  padding-left: 8px; }
+
 #main {
   min-height: 400px; }
 
-@media screen and (min-width: 769px) {
-  #content {
-    background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 86.9565217391%, transparent 86.9565217391%);
-    background-size: 6.301369863%;
-    background-origin: content-box;
-    background-clip: content-box;
-    background-position: left top; }
+@media screen and (min-width: 551px) {
   #primary {
-    width: 55.8904109589%;
+    width: 57.8226387888%;
     float: left;
-    margin-right: 0.8219178082%; }
+    margin-right: 1.225666907%; }
   #secondary {
-    width: 36.9863013699%;
+    width: 32.516222062%;
     float: right;
     margin-right: 0; } }
 
@@ -404,6 +384,84 @@ html, body {
   #banner .image {
     width: 100%;
     left: 0; } }
+
+/*--------------------------------------------------------------
+# Tertiary
+--------------------------------------------------------------*/
+@media screen and (min-width: 551px) {
+  #tertiary #student-profiles {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    #tertiary #student-profiles:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #tertiary #student-profiles .profile {
+      width: 32.516222062%;
+      float: left;
+      margin-right: 1.225666907%; }
+      #tertiary #student-profiles .profile:nth-child(3n) {
+        width: 32.516222062%;
+        float: right;
+        margin-right: 0; } }
+
+/*--------------------------------------------------------------
+# Weekly Schedule
+--------------------------------------------------------------*/
+@media screen and (min-width: 321px) and (max-width: 550px) {
+  #weekly-schedule {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    #weekly-schedule:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #weekly-schedule .day {
+      width: 48.7591240876%;
+      float: left;
+      margin-right: 2.4817518248%; }
+      #weekly-schedule .day:nth-child(2n) {
+        width: 48.7591240876%;
+        float: right;
+        margin-right: 0; } }
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
+  #weekly-schedule {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    #weekly-schedule:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #weekly-schedule .day {
+      width: 32.516222062%;
+      float: left;
+      margin-right: 1.225666907%; }
+      #weekly-schedule .day:nth-child(3n) {
+        width: 32.516222062%;
+        float: right;
+        margin-right: 0; } }
+
+@media screen and (min-width: 769px) {
+  #weekly-schedule {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    #weekly-schedule:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #weekly-schedule .day {
+      width: 24.0807498198%;
+      float: left;
+      margin-right: 1.225666907%; }
+      #weekly-schedule .day:nth-child(4n) {
+        width: 24.0807498198%;
+        float: right;
+        margin-right: 0; } }
 
 /*--------------------------------------------------------------
 # Footer
@@ -773,10 +831,87 @@ a {
   margin-bottom: 32px; }
   .home #main h2 {
     font-family: "Noto Serif", sans-serif;
+    font-style: italic;
     color: #777;
-    margin-bottom: 32px; }
+    margin: 50px 0; }
+  .home #main h3 {
+    margin-bottom: 0; }
   .home #main p {
     margin-top: 0; }
+
+.page-classes #weekly-schedule .day {
+  background: #e6e6e6;
+  margin-bottom: 16px;
+  position: relative; }
+  .page-classes #weekly-schedule .day.legend {
+    background: transparent;
+    padding: 8px 16px; }
+    .page-classes #weekly-schedule .day.legend .legend-header {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 16px; }
+    .page-classes #weekly-schedule .day.legend .tag {
+      margin-right: 8px; }
+    .page-classes #weekly-schedule .day.legend p {
+      font-size: 14px;
+      margin-bottom: 8px; }
+
+.page-classes #weekly-schedule .tag {
+  background: #404040;
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  display: inline-block; }
+  .page-classes #weekly-schedule .tag.basic-aikido, .page-classes #weekly-schedule .tag.genkido {
+    background: #dd624c; }
+  .page-classes #weekly-schedule .tag.advanced-aikido {
+    background: #584985; }
+  .page-classes #weekly-schedule .tag.basic-weapons {
+    background: #EEB060; }
+  .page-classes #weekly-schedule .tag.advanced-weapons {
+    background: #5CAD78; }
+
+.page-classes #weekly-schedule .day-header {
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #CCC;
+  padding: 8px 16px;
+  text-align: right; }
+  .page-classes #weekly-schedule .day-header p {
+    margin: 0;
+    position: absolute;
+    left: 16px; }
+
+.page-classes #weekly-schedule .day-body {
+  font-size: 16px;
+  padding: 8px 16px; }
+  .page-classes #weekly-schedule .day-body .teacher {
+    font-style: italic;
+    margin-bottom: 16px; }
+
+.page-classes #main td {
+  padding: 5px 0; }
+
+@media screen and (min-width: 321px) and (max-width: 550px) {
+  .page-classes #weekly-schedule .day {
+    height: 200px; }
+  .page-classes #weekly-schedule .day-body .teacher {
+    position: absolute;
+    bottom: 0; } }
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
+  .page-classes #weekly-schedule .day {
+    height: 240px; }
+  .page-classes #weekly-schedule .day-body .teacher {
+    position: absolute;
+    bottom: 0; } }
+
+@media screen and (min-width: 769px) {
+  .page-classes #weekly-schedule .day {
+    height: 180px; }
+  .page-classes #weekly-schedule .day-body .teacher {
+    position: absolute;
+    bottom: 0; } }
 
 /*--------------------------------------------------------------
 ## Sidebar
@@ -785,13 +920,74 @@ a {
   margin-top: 32px; }
   #secondary .sidebar {
     background: #DDD;
-    border-right: solid #dd624c 10px;
-    border-bottom: solid #dd624c 10px;
+    border-right: solid #dd624c 8px;
+    border-bottom: solid #dd624c 8px;
     padding: 16px 32px 32px;
     margin-bottom: 16px; }
     #secondary .sidebar:nth-child(even) {
-      border-right: solid #8a886e 10px;
-      border-bottom: solid #8a886e 10px; }
+      border-right: solid #8a886e 8px;
+      border-bottom: solid #8a886e 8px; }
+    #secondary .sidebar.schedule dt.simcal-day-label {
+      font-weight: normal;
+      margin-bottom: 16px;
+      border-bottom: none !important; }
+      #secondary .sidebar.schedule dt.simcal-day-label span {
+        color: #404040 !important;
+        background-color: transparent !important; }
+    #secondary .sidebar.schedule dd {
+      margin: 0; }
+    #secondary .sidebar.schedule ul.simcal-events {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0; }
+      #secondary .sidebar.schedule ul.simcal-events .simcal-event-details {
+        margin-bottom: 16px; }
+      #secondary .sidebar.schedule ul.simcal-events p {
+        margin: 0; }
+      #secondary .sidebar.schedule ul.simcal-events .simcal-event-description {
+        font-style: italic; }
+
+/*--------------------------------------------------------------
+## Sections
+--------------------------------------------------------------*/
+#tertiary {
+  margin-top: 32px;
+  clear: both; }
+  #tertiary h3 {
+    padding: 0 8px 8px;
+    border-bottom: solid 1px #777; }
+  #tertiary .blurb {
+    font-size: 20px;
+    font-style: italic;
+    color: #777;
+    margin: 0 8px; }
+  #tertiary #student-profiles {
+    content: "";
+    display: table;
+    table-layout: fixed; }
+    #tertiary #student-profiles .profiles {
+      content: "";
+      display: table;
+      table-layout: fixed;
+      margin: 16px 8px; }
+    #tertiary #student-profiles .profile figure {
+      width: 100%;
+      margin: 0 0 16px 0; }
+      #tertiary #student-profiles .profile figure img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto; }
+      #tertiary #student-profiles .profile figure figcaption {
+        font-size: 12px;
+        font-style: italic;
+        text-align: center; }
+    #tertiary #student-profiles .profile .name {
+      font-weight: bold;
+      margin-bottom: 8px; }
+    #tertiary #student-profiles .profile .rank {
+      font-style: italic; }
+    #tertiary #student-profiles .profile .description {
+      font-size: 14px; }
 
 /*--------------------------------------------------------------
 ## Footer

@@ -47,3 +47,7 @@
 		</div>
 
 	</aside><!-- #secondary -->
+
+<?php
+	include(locate_template('/template-parts/content-tertiary.php'));
+?>

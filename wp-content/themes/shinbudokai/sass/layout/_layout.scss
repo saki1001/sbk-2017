@@ -3,13 +3,19 @@
 
 // Configuring Susy Defaults
 $susy: (
-  columns: 4, 
-  gutters: 0.15, // based on 66px to 10px gutter
-  debug: (image: show-columns),
+  columns: 12, 
+  gutters: 0.17, // based on 66px to 10px gutter
+  // debug: (image: show-columns),
   global-box-sizing: border-box,
   use-custom: (rem: true)
 );
 
+@media screen and (max-width: $mobile_small__max) {
+	$susy: (
+	  columns: 4, 
+	  gutters: 0.15, // based on 76px to 10px gutter
+	);
+}
 
 @media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
 	$susy: (
@@ -27,7 +33,7 @@ $susy: (
 
 @media screen and (min-width: $desktop__min) {
 	$susy: (
-	  columns: 16, 
+	  columns: 12,
 	  gutters: 0.17, // based on 58px to 10px gutter
 	);
 }
@@ -127,7 +133,6 @@ html, body {
 # Main Content / Banner
 --------------------------------------------------------------*/
 #content {
-	@include show-grid(8);
 	position: relative;
 }
 
@@ -135,10 +140,13 @@ html, body {
 	position: relative;
 }
 
+#primary {
+	padding-left: $space-half;
+}
+
 #main {
 	min-height: 400px;
 }
-
 
 @media screen and (max-width: $mobile_small__max) {
 
@@ -148,21 +156,19 @@ html, body {
 
 }
 
-@media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
-
-}
-
-@media screen and (min-width: $desktop__min) {
+@media screen and (min-width: $tablet__min) {
 	#content {
-		@include show-grid(16);
+		
 	}
 
 	#primary {
-		@include span(9 of 16);
+		// @include show-grid(16);
+		@include span(7 of 12);
 	}
 
 	#secondary {
-		@include span(6 of 16 last);
+		// @include show-grid(16);
+		@include span(4 of 12 last);
 	}
 }
 
@@ -171,6 +177,76 @@ html, body {
 		.image {
 			width: 100%;
 			left: 0;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+# Tertiary
+--------------------------------------------------------------*/
+#student-profiles {
+}
+
+@media screen and (min-width: $tablet__min) {
+	#tertiary {
+		@include show-grid(12);
+
+		#student-profiles {
+			@include container;
+
+			.profile {
+				@include span(4 of 12);
+
+				&:nth-child(3n) {
+					@include span(4 of 12 last);
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Weekly Schedule
+--------------------------------------------------------------*/
+@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
+	#weekly-schedule {
+		@include container;
+
+		.day {
+			@include span(3 of 6);
+
+			&:nth-child(2n) {
+				@include span(3 of 6 last);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
+	#weekly-schedule {
+		@include container;
+
+		.day {
+			@include span(4 of 12);
+
+			&:nth-child(3n) {
+				@include span(4 of 12 last);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $desktop__min) {
+	#weekly-schedule {
+		@include container;
+
+		.day {
+			@include span(3 of 12);
+
+			&:nth-child(4n) {
+				@include span(3 of 12 last);
+			}
 		}
 	}
 }

@@ -12,5 +12,40 @@
 			border-right: solid $green $sidebar_border-width;
 			border-bottom: solid $green $sidebar_border-width;
 		}
+
+		&.schedule {
+			dt.simcal-day-label {
+				font-weight: normal;
+				margin-bottom: $space;
+				border-bottom: none !important;
+
+				span {
+					color: $black !important;
+					background-color: transparent !important;
+				}
+			}
+
+			dd {
+				margin: 0;
+			}
+
+			ul.simcal-events {
+				list-style: none;
+				margin-left: 0;
+				padding-left: 0;
+
+				.simcal-event-details {
+					margin-bottom: $space;
+				}
+
+				p {
+					margin: 0;
+				}
+
+				.simcal-event-description {
+					font-style: italic;
+				}
+			}
+		}
 	}
 }

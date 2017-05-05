@@ -8,6 +8,64 @@
  */
 
 ?>
+	<h1>Schedule</h1>
+
+	<div id="weekly-schedule">
+	<?php
+		$days = get_field('weekly_schedule');
+
+		foreach( $days as $day ) :
+			// error_log(print_r($day, true));
+			$dayName = $day['day'];
+			$description = $day['class_description'];
+			$teacher = $day['teacher'];
+			$tags = $day['tags'];
+	?>
+		<div class="day">
+
+			<div class="day-header">
+				<p><?php echo $dayName; ?></p>
+			<?php
+				foreach( $tags as $tag ) :
+					error_log(print_r($tag, true));
+			?>
+				<span class="tag <?php echo $tag; ?>"></span>
+			<?php
+				endforeach;
+			?>
+			</div><!-- .day-header -->
+
+			<div class="day-body">
+				<?php echo $description; ?>
+				<p class="teacher"><?php echo $teacher; ?></p>
+			</div><!-- .day-body -->
+
+		</div><!-- .day -->
+	<?php
+		endforeach;
+	?>
+
+		<div class="day legend">
+			<div class="legend-header">Legend</div>
+
+			<p>
+				<span class="tag basic-aikido"></span>
+				Basic Aikido/Genkido (all&nbsp;levels)
+			</p>
+			<p>
+				<span class="tag advanced-aikido"></span>
+				Advanced Aikido (3rd&nbsp;kyu&nbsp;&amp;&nbsp;up)
+			</p>
+			<p>
+				<span class="tag basic-weapons"></span>
+				Basic Weapons (all&nbsp;levels)
+			</p>
+			<p>
+				<span class="tag advanced-weapons"></span>
+				Advanced Weapons (3rd&nbsp;kyu&nbsp;&amp;&nbsp;up)
+			</p>
+		</div>
+	</div><!-- #weekly-schedule -->
 
 	<div id="primary" class="content-area">
 
@@ -39,3 +97,7 @@
 		</div>
 
 	</aside><!-- #secondary -->
+
+<?php
+	include(locate_template('/template-parts/content-tertiary.php'));
+?>

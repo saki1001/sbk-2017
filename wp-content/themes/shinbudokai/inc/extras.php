@@ -28,6 +28,19 @@ function shinbudokai_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'shinbudokai_body_classes' );
 
+
+// Page Slug Body Class
+function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+	
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
+
+
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */

@@ -1,0 +1,57 @@
+#tertiary {
+	margin-top: $space-double;
+	clear: both;
+
+	h3 {
+		padding: 0 $space-half $space-half;
+		border-bottom: solid 1px $medGray;
+	}
+
+	.blurb {
+		font-size: 20px;
+		font-style: italic;
+		color: $medGray;
+		margin: 0 $space-half;
+	}
+
+	#student-profiles {
+		@include clearfix;
+
+		.profiles {
+			@include clearfix;
+			margin: $space $space-half;
+		}
+
+		.profile {
+			figure {
+				width: 100%;
+				margin: 0 0 $space 0;
+
+				img {
+					max-width: 100%;
+					max-height: 100%;
+					height: auto;
+				}
+
+				figcaption {
+					font-size: 12px;
+					font-style: italic;
+					text-align: center;
+				}
+			}
+
+			.name {
+				font-weight: bold;
+				margin-bottom: $space-half;
+			}
+
+			.rank {
+				font-style: italic;
+			}
+
+			.description {
+				font-size: 14px;
+			}
+		}
+	}
+}

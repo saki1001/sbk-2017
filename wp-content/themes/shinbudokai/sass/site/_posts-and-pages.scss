@@ -33,12 +33,152 @@
 
 		h2 {
 			font-family: $font__header;
+			font-style: italic;
 			color: $medGray;
-			margin-bottom: $space-double;
+			margin: 50px 0;
+		}
+
+		h3 {
+			margin-bottom: 0;
 		}
 
 		p {
 			margin-top: 0;
+		}
+	}
+}
+
+.page-classes {
+	#weekly-schedule {
+		.day {
+			background: $lightGray;
+			margin-bottom: $space;
+			position: relative;
+
+			&.legend {
+				background: transparent;
+				padding: $space-half $space;
+
+				.legend-header {
+					font-weight: bold;
+					text-transform: uppercase;
+					margin-bottom: $space;
+				}
+
+				.tag {
+					margin-right: $space-half;
+				}
+
+				p {
+					font-size: 14px;
+					margin-bottom: $space-half;
+				}
+			}
+		}
+
+		.tag {
+			background: $black;
+			width: 10px;
+			height: 10px;
+			border-radius: 20px;
+			display: inline-block;
+
+			&.basic-aikido,
+			&.genkido {
+				background: $red;
+			}
+
+			&.advanced-aikido {
+				background: $purple;
+			}
+
+			&.basic-weapons {
+				background: $yellow;
+			}
+
+			&.advanced-weapons {
+				background: $brightGreen;
+			}
+		}
+
+		.day-header {
+			font-weight: bold;
+			text-transform: uppercase;
+			background: $grayC;
+			padding: $space-half $space;
+			text-align: right;
+
+			p {
+				margin: 0;
+				position: absolute;
+				left: $space;
+			}
+		}
+
+		.day-body {
+			font-size: 16px;
+			padding: $space-half $space;
+
+			.teacher {
+				font-style: italic;
+				margin-bottom: $space;
+			}
+		}
+	}
+
+	#main {
+		td {
+			padding: 5px 0;
+		}
+	}
+}
+
+@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
+	.page-classes {
+		#weekly-schedule {
+			.day {
+				height: 200px;
+			}
+
+			.day-body {
+				.teacher {
+					position: absolute;
+					bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
+	.page-classes {
+		#weekly-schedule {
+			.day {
+				height: 240px;
+			}
+			.day-body {
+				.teacher {
+					position: absolute;
+					bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $desktop__min) {
+	.page-classes {
+		#weekly-schedule {
+			.day {
+				height: 180px;
+			}
+
+			.day-body {
+				.teacher {
+					position: absolute;
+					bottom: 0;
+				}
+			}
 		}
 	}
 }
