@@ -5,8 +5,8 @@
 		background: $gray;
 		border-right: solid $red $sidebar_border-width;
 		border-bottom: solid $red $sidebar_border-width;
-		padding: $space $space-double $space-double;
 		margin-bottom: $space;
+		padding: $space-half $space;
 
 		&:nth-child(even) {
 			border-right: solid $green $sidebar_border-width;
@@ -46,6 +46,15 @@
 					font-style: italic;
 				}
 			}
+		}
+	}
+}
+
+@media screen and (min-width: $desktop__min) {
+	#secondary {
+
+		.sidebar {
+			padding: $space $space-double $space-double;
 		}
 	}
 }

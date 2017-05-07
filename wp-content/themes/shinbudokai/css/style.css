@@ -234,11 +234,15 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  font-size: 30px; }
+
 h2, h3 {
   margin-bottom: 8px; }
 
 h3 {
   font-family: "Noto Sans", sans-serif;
+  font-size: 24px;
   font-weight: 700; }
 
 p {
@@ -311,33 +315,32 @@ html, body {
 #content,
 #footer .inner {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px; }
+  margin: 0 auto; }
+
+#header .inner,
+#content,
+#footer .inner {
+  padding: 0 2%; }
+
+@media screen and (min-width: 1200px) {
+  #header .inner,
+  #content,
+  #footer .inner {
+    padding-left: 0;
+    padding-right: 0; } }
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-@media screen and (max-width: 320px) {
-  .site-branding {
-    width: 48.1152993348%;
-    float: left;
-    margin-right: 3.7694013304%; }
-  .main-navigation {
-    width: 48.1152993348%;
-    float: right;
-    margin-right: 0; } }
-
-@media screen and (min-width: 321px) and (max-width: 550px) {
-  .site-branding {
-    width: 48.7591240876%;
-    float: left;
-    margin-right: 2.4817518248%; }
-  .main-navigation {
-    width: 48.7591240876%;
-    float: right;
-    margin-right: 0; } }
+@media screen and (max-width: 550px) {
+  #header .site-branding {
+    width: 50%; } }
 
 @media screen and (min-width: 551px) {
+  #header .main-navigation {
+    position: absolute;
+    right: 16px;
+    bottom: -6px; }
   .site-branding {
     width: 24.0807498198%;
     float: left;
@@ -349,12 +352,6 @@ html, body {
     .main-navigation ul {
       float: right; } }
 
-@media screen and (min-width: 551px) {
-  #header .main-navigation {
-    position: absolute;
-    right: 16px;
-    bottom: -6px; } }
-
 /*--------------------------------------------------------------
 # Main Content / Banner
 --------------------------------------------------------------*/
@@ -362,10 +359,9 @@ html, body {
   position: relative; }
 
 #banner {
-  position: relative; }
-
-#primary {
-  padding-left: 8px; }
+  width: 105%;
+  position: relative;
+  left: -2.5%; }
 
 #main {
   min-height: 400px; }
@@ -388,45 +384,47 @@ html, body {
 /*--------------------------------------------------------------
 # Tertiary
 --------------------------------------------------------------*/
-@media screen and (min-width: 551px) {
-  #tertiary #student-profiles {
+@media screen and (min-width: 551px) and (max-width: 768px) {
+  #tertiary .featured-section {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto; }
-    #tertiary #student-profiles:after {
+    #tertiary .featured-section:after {
       content: " ";
       display: block;
       clear: both; }
-    #tertiary #student-profiles .profile {
+    #tertiary .featured-section .block {
+      width: 49.3871665465%;
+      float: left;
+      margin-right: 1.225666907%; }
+      #tertiary .featured-section .block:nth-child(2n) {
+        width: 49.3871665465%;
+        float: right;
+        margin-right: 0;
+        float: left; } }
+
+@media screen and (min-width: 769px) {
+  #tertiary .featured-section {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    #tertiary .featured-section:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    #tertiary .featured-section .block {
       width: 32.516222062%;
       float: left;
       margin-right: 1.225666907%; }
-      #tertiary #student-profiles .profile:nth-child(3n) {
+      #tertiary .featured-section .block:nth-child(3n) {
         width: 32.516222062%;
         float: right;
-        margin-right: 0; } }
+        margin-right: 0;
+        float: left; } }
 
 /*--------------------------------------------------------------
 # Weekly Schedule
 --------------------------------------------------------------*/
-@media screen and (min-width: 321px) and (max-width: 550px) {
-  #weekly-schedule {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto; }
-    #weekly-schedule:after {
-      content: " ";
-      display: block;
-      clear: both; }
-    #weekly-schedule .day {
-      width: 48.7591240876%;
-      float: left;
-      margin-right: 2.4817518248%; }
-      #weekly-schedule .day:nth-child(2n) {
-        width: 48.7591240876%;
-        float: right;
-        margin-right: 0; } }
-
 @media screen and (min-width: 551px) and (max-width: 768px) {
   #weekly-schedule {
     max-width: 100%;
@@ -466,6 +464,9 @@ html, body {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+#footer .site-branding {
+  float: none; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -621,6 +622,17 @@ a {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+header .inner {
+  position: relative; }
+  header .inner button {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    position: absolute;
+    top: 16px;
+    right: 2%; }
+
 .main-navigation ul {
   display: none;
   list-style: none;
@@ -646,15 +658,13 @@ a {
     left: auto; }
 
 .main-navigation li {
-  float: left;
   position: relative; }
 
 .main-navigation a {
+  font-weight: bold;
   color: #404040;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: solid #777 6px;
-  padding: 28px 16px 16px 16px;
   display: block; }
 
 .main-navigation a:hover,
@@ -662,20 +672,44 @@ a {
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
 .main-navigation .current-menu-ancestor > a {
-  color: #333;
-  border-bottom: solid #dd624c 6px;
-  background: #e6e6e6; }
+  color: #333; }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
 
+@media screen and (max-width: 550px) {
+  .main-navigation {
+    text-align: center; }
+    .main-navigation li {
+      border-top: solid 1px #777;
+      padding-top: 8px;
+      margin-bottom: 8px; }
+    .main-navigation a:hover,
+    .main-navigation .current_page_item > a,
+    .main-navigation .current-menu-item > a,
+    .main-navigation .current_page_ancestor > a,
+    .main-navigation .current-menu-ancestor > a {
+      color: #dd624c; } }
+
 @media screen and (min-width: 551px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: block; } }
+    display: block; }
+  .main-navigation li {
+    float: left; }
+  .main-navigation a {
+    border-bottom: solid #777 6px;
+    padding: 28px 16px 16px 16px; }
+  .main-navigation a:hover,
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
+  .main-navigation .current_page_ancestor > a,
+  .main-navigation .current-menu-ancestor > a {
+    border-bottom: solid #dd624c 6px;
+    background: #e6e6e6; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -827,25 +861,39 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
 .home #main {
   margin-bottom: 32px; }
   .home #main h2 {
     font-family: "Noto Serif", sans-serif;
     font-style: italic;
     color: #777;
-    margin: 50px 0; }
+    margin: 16px 0 32px; }
   .home #main h3 {
     margin-bottom: 0; }
   .home #main p {
     margin-top: 0; }
 
+@media screen and (min-width: 551px) {
+  .home #main h2 {
+    margin: 50px 0; } }
+
+/*--------------------------------------------------------------
+# Instructor
+--------------------------------------------------------------*/
+.page-instructor h1 {
+  margin-top: 32px; }
+
+/*--------------------------------------------------------------
+# Classes
+--------------------------------------------------------------*/
 .page-classes #weekly-schedule .day {
-  background: #e6e6e6;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   position: relative; }
   .page-classes #weekly-schedule .day.legend {
-    background: transparent;
-    padding: 8px 16px; }
+    background: transparent; }
     .page-classes #weekly-schedule .day.legend .legend-header {
       font-weight: bold;
       text-transform: uppercase;
@@ -857,34 +905,53 @@ a {
       margin-bottom: 8px; }
 
 .page-classes #weekly-schedule .tag {
-  background: #404040;
-  width: 10px;
-  height: 10px;
-  border-radius: 20px;
   display: inline-block; }
   .page-classes #weekly-schedule .tag.basic-aikido, .page-classes #weekly-schedule .tag.genkido {
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
     background: #dd624c; }
   .page-classes #weekly-schedule .tag.advanced-aikido {
+    width: 10px;
+    height: 10px;
     background: #584985; }
   .page-classes #weekly-schedule .tag.basic-weapons {
-    background: #EEB060; }
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #EEB060; }
   .page-classes #weekly-schedule .tag.advanced-weapons {
-    background: #5CAD78; }
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-bottom: 8px solid #5CAD78;
+    position: relative;
+    top: -5px; }
+    .page-classes #weekly-schedule .tag.advanced-weapons:after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: -5px;
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-top: 8px solid #5CAD78; }
 
 .page-classes #weekly-schedule .day-header {
   font-weight: bold;
   text-transform: uppercase;
-  background: #CCC;
-  padding: 8px 16px;
-  text-align: right; }
+  text-align: right;
+  border-bottom: solid 1px #404040;
+  padding-bottom: 4px; }
   .page-classes #weekly-schedule .day-header p {
     margin: 0;
-    position: absolute;
-    left: 16px; }
+    position: absolute; }
 
 .page-classes #weekly-schedule .day-body {
-  font-size: 16px;
-  padding: 8px 16px; }
+  font-size: 16px; }
+  .page-classes #weekly-schedule .day-body p {
+    margin-bottom: 16px; }
   .page-classes #weekly-schedule .day-body .teacher {
     font-style: italic;
     margin-bottom: 16px; }
@@ -892,26 +959,33 @@ a {
 .page-classes #main td {
   padding: 5px 0; }
 
-@media screen and (min-width: 321px) and (max-width: 550px) {
+@media screen and (min-width: 551px) {
   .page-classes #weekly-schedule .day {
-    height: 200px; }
-  .page-classes #weekly-schedule .day-body .teacher {
-    position: absolute;
-    bottom: 0; } }
+    background: #e6e6e6;
+    margin-bottom: 16px; }
+  .page-classes #weekly-schedule .day-header {
+    border-bottom: none;
+    background: #CCC;
+    padding: 8px 16px; }
+    .page-classes #weekly-schedule .day-header.legend {
+      padding: 8px 16px; }
+    .page-classes #weekly-schedule .day-header p {
+      left: 16px; }
+  .page-classes #weekly-schedule .day-body {
+    padding: 8px 16px; }
+    .page-classes #weekly-schedule .day-body p {
+      margin-bottom: 32px; }
+    .page-classes #weekly-schedule .day-body .teacher {
+      position: absolute;
+      bottom: 0; } }
 
 @media screen and (min-width: 551px) and (max-width: 768px) {
   .page-classes #weekly-schedule .day {
-    height: 240px; }
-  .page-classes #weekly-schedule .day-body .teacher {
-    position: absolute;
-    bottom: 0; } }
+    height: 240px; } }
 
 @media screen and (min-width: 769px) {
   .page-classes #weekly-schedule .day {
-    height: 180px; }
-  .page-classes #weekly-schedule .day-body .teacher {
-    position: absolute;
-    bottom: 0; } }
+    height: 180px; } }
 
 /*--------------------------------------------------------------
 ## Sidebar
@@ -922,8 +996,8 @@ a {
     background: #DDD;
     border-right: solid #dd624c 8px;
     border-bottom: solid #dd624c 8px;
-    padding: 16px 32px 32px;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    padding: 8px 16px; }
     #secondary .sidebar:nth-child(even) {
       border-right: solid #8a886e 8px;
       border-bottom: solid #8a886e 8px; }
@@ -947,6 +1021,10 @@ a {
       #secondary .sidebar.schedule ul.simcal-events .simcal-event-description {
         font-style: italic; }
 
+@media screen and (min-width: 769px) {
+  #secondary .sidebar {
+    padding: 16px 32px 32px; } }
+
 /*--------------------------------------------------------------
 ## Sections
 --------------------------------------------------------------*/
@@ -954,39 +1032,41 @@ a {
   margin-top: 32px;
   clear: both; }
   #tertiary h3 {
-    padding: 0 8px 8px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
     border-bottom: solid 1px #777; }
   #tertiary .blurb {
     font-size: 20px;
     font-style: italic;
     color: #777;
-    margin: 0 8px; }
-  #tertiary #student-profiles {
+    margin-bottom: 32px; }
+  #tertiary .featured-section {
     content: "";
     display: table;
     table-layout: fixed; }
-    #tertiary #student-profiles .profiles {
+    #tertiary .featured-section .blocks {
       content: "";
       display: table;
       table-layout: fixed;
-      margin: 16px 8px; }
-    #tertiary #student-profiles .profile figure {
+      margin-bottom: 16px; }
+    #tertiary .featured-section .block figure {
       width: 100%;
       margin: 0 0 16px 0; }
-      #tertiary #student-profiles .profile figure img {
+      #tertiary .featured-section .block figure img {
         max-width: 100%;
         max-height: 100%;
         height: auto; }
-      #tertiary #student-profiles .profile figure figcaption {
+      #tertiary .featured-section .block figure figcaption {
         font-size: 12px;
         font-style: italic;
         text-align: center; }
-    #tertiary #student-profiles .profile .name {
+    #tertiary .featured-section .block .name,
+    #tertiary .featured-section .block .title {
       font-weight: bold;
       margin-bottom: 8px; }
-    #tertiary #student-profiles .profile .rank {
+    #tertiary .featured-section .block .rank {
       font-style: italic; }
-    #tertiary #student-profiles .profile .description {
+    #tertiary .featured-section .block .description {
       font-size: 14px; }
 
 /*--------------------------------------------------------------

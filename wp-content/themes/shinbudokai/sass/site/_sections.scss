@@ -3,7 +3,8 @@
 	clear: both;
 
 	h3 {
-		padding: 0 $space-half $space-half;
+		margin-bottom: $space;
+		padding-bottom: $space-half;
 		border-bottom: solid 1px $medGray;
 	}
 
@@ -11,18 +12,18 @@
 		font-size: 20px;
 		font-style: italic;
 		color: $medGray;
-		margin: 0 $space-half;
+		margin-bottom: $space-double;
 	}
 
-	#student-profiles {
+	.featured-section {
 		@include clearfix;
 
-		.profiles {
+		.blocks {
 			@include clearfix;
-			margin: $space $space-half;
+			margin-bottom: $space;
 		}
 
-		.profile {
+		.block {
 			figure {
 				width: 100%;
 				margin: 0 0 $space 0;
@@ -40,7 +41,8 @@
 				}
 			}
 
-			.name {
+			.name,
+			.title {
 				font-weight: bold;
 				margin-bottom: $space-half;
 			}

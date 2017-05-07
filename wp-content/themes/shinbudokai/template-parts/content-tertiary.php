@@ -14,7 +14,7 @@
 
 	<?php
 		$sections = get_field('sections');
-		// error_log(print_r($sections, true));
+		error_log(print_r($sections, true));
 
 		foreach( $sections as $section ) :
 			$layout = $section['acf_fc_layout'];
@@ -28,7 +28,7 @@
 				// STUDENT PROFILES
 				case 'student_profiles' :
 			?>
-				<section id="student-profiles" role="featured-content">
+				<section id="student-profiles" class="featured-section" role="featured-content">
 				<h3><?php echo $title; ?></h3>
 			<?php
 				if( $blurb ) :
@@ -39,7 +39,7 @@
 
 				$profiles = $section['profiles'];
 			?>
-				<div class="profiles">
+				<div class="blocks">
 				<?php
 					foreach( $profiles as $profile ) :
 						$ID = $profile->ID;
@@ -48,7 +48,7 @@
 						$rank = get_field('rank', $ID);
 						$description = $profile->post_excerpt;
 				?>
-					<div class="profile">
+					<div class="block">
 						<figure>
 							<?php echo get_the_post_thumbnail($ID); ?>
 							<figcaption>
@@ -59,12 +59,51 @@
 							<?php echo $name; ?> <span class="rank"><?php echo $rank; ?></span>
 						</p>
 						<p class="description"><?php echo $description; ?></p>
-					</div><!-- .profile -->
+					</div><!-- .block -->
 				<?php
 					endforeach;
 				?>
-				</div><!-- .profiles -->
+				</div><!-- .blocks -->
 				</section><!-- #student-profiles -->
+
+			<?php
+					break;
+
+				case 'section_image_video':
+			?>
+				<section id="image-video-blocks" class="featured-section" role="featured-content">
+				<h3><?php echo $title; ?></h3>
+			<?php
+				if( $blurb ) :
+			?>
+				<p class="blurb"><?php echo $blurb; ?></p>
+			<?php
+				endif;
+
+				$blocks = $section['blocks'];
+			?>
+				<div class="blocks">
+				<?php
+					foreach( $blocks as $block ) :
+						$image = $block['image'];
+						$title = $block['title'];
+						$subtitle = $block['subtitle'];
+						$description = $block['description'];
+				?>
+					<div class="block">
+						<figure>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+						</figure>
+						<p class="title">
+							<?php echo $title; ?>
+						</p>
+						<?php echo $description; ?>
+					</div><!-- .block -->
+				<?php
+					endforeach;
+				?>
+				</div><!-- .blocks -->
+				</section><!-- #image-video-blocks -->
 
 			<?php
 					break;

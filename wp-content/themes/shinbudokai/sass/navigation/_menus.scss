@@ -1,3 +1,17 @@
+header .inner {
+	position: relative;
+	
+	button {
+		font-family: $font__main;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 6px 10px;
+		position: absolute;
+		top: $space;
+		right: 2%;
+	}
+}
+
 .main-navigation {
 	ul {
 		display: none;
@@ -45,7 +59,6 @@
 	}
 
 	li {
-		float: left;
 		position: relative;
 
 		&:hover > a,
@@ -54,11 +67,10 @@
 	}
 
 	a {
+		font-weight: bold; 
 		color: $black;
 		text-transform: uppercase;
 		text-decoration: none;
-		border-bottom: solid $medGray $header_border-height;
-		padding: ($space+$header_border-height*2) $space $space $space;
 		display: block;
 	}
 
@@ -68,8 +80,6 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 		color: $darkGray;
-		border-bottom: solid $red $header_border-height;
-		background: $lightGray;
 	}
 }
 
@@ -79,13 +89,53 @@
 	display: block;
 }
 
+@media screen and (max-width: $mobile-large__max) {
+	.main-navigation {
+		text-align: center;
+
+		li {
+			border-top: solid 1px $medGray;
+			padding-top: $space-half;
+			margin-bottom: $space-half;
+		}
+
+		a:hover,
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			color: $red;
+		}
+	}
+}
+
 @media screen and (min-width: $tablet__min) {
 	.menu-toggle {
 		display: none;
 	}
 
-	.main-navigation ul {
-		display: block;
+	.main-navigation {
+		ul {
+			display: block;
+		}
+
+		li {
+			float: left;
+		}
+
+		a {
+			border-bottom: solid $medGray $header_border-height;
+			padding: ($space+$header_border-height*2) $space $space $space;
+		}
+
+		a:hover,
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			border-bottom: solid $red $header_border-height;
+			background: $lightGray;
+		}
 	}
 }
 

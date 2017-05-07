@@ -15,9 +15,13 @@
 
 	<footer id="footer" class="site-footer" role="contentinfo">
 		<div class="site-info inner">
-			<a href="/">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/sbk-logo.png" alt ="Shin Budo Kai Logo" />
-			</a>
+			<div class="site-branding">
+				<p class="site-title">
+					<a href="/">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/sbk-logo-white.png" alt ="Shin Budo Kai Logo" />
+					</a>
+				</p>
+			</div>
 
 			<p>
 				77 8th Ave (on the corner of 14th St)

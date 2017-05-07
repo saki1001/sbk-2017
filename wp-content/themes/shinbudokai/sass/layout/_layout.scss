@@ -65,46 +65,43 @@ html, body {
 #footer .inner {
 	max-width: $desktop__max;
 	margin: 0 auto;	
-	padding: 0 $space;
 }
+
+#header .inner,
+#content,
+#footer .inner {
+	padding: 0 2%;
+}
+
+@media screen and (min-width: $desktop__max) {
+	#header .inner,
+	#content,
+	#footer .inner {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {}
-
-@media screen and (max-width: $mobile_small__max) {
-	#header .inner {
-		@include show-grid(4);
-	}
-	.site-branding {
-		@include span(2 of 4);
-	}
-
-	.main-navigation {
-		@include span(2 of 4 last);
-	}
-}
-
-@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
-	#header .inner {
-		@include show-grid(6);
-	}
-
-	.site-branding {
-		@include span(3 of 6);
-	}
-
-	.main-navigation {
-		@include span(3 of 6 last);
+@media screen and (max-width: $mobile_large__max) {
+	#header {
+		.site-branding {
+			width: 50%;
+		}
 	}
 }
 
 @media screen and (min-width: $tablet__min) {
-	#header .inner {
-		// @include show-grid(12);
+	#header {
+		.main-navigation {
+			position: absolute;
+			right: $space;
+			bottom: -$header_border-height;
+		}
 	}
-
 	.site-branding {
 		@include span(3 of 12);
 	}
@@ -118,16 +115,6 @@ html, body {
 	}
 }
 
-@media screen and (min-width: $tablet__min) {
-	#header {
-		.main-navigation {
-			position: absolute;
-			right: $space;
-			bottom: -$header_border-height;
-		}
-	}
-}
-
 
 /*--------------------------------------------------------------
 # Main Content / Banner
@@ -137,11 +124,13 @@ html, body {
 }
 
 #banner {
+	width: 105%;
 	position: relative;
+	left: -2.5%
 }
 
 #primary {
-	padding-left: $space-half;
+	
 }
 
 #main {
@@ -188,41 +177,48 @@ html, body {
 #student-profiles {
 }
 
-@media screen and (min-width: $tablet__min) {
+@media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
 	#tertiary {
 		@include show-grid(12);
 
-		#student-profiles {
+		.featured-section {
 			@include container;
 
-			.profile {
-				@include span(4 of 12);
+			.block {
+				@include span(6 of 12);
 
-				&:nth-child(3n) {
-					@include span(4 of 12 last);
+				&:nth-child(2n) {
+					@include span(6 of 12 last);
+					float: left;
 				}
 			}
 		}
 	}
 }
 
-/*--------------------------------------------------------------
-# Weekly Schedule
---------------------------------------------------------------*/
-@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
-	#weekly-schedule {
-		@include container;
+@media screen and (min-width: $desktop__min) {
+	#tertiary {
+		@include show-grid(12);
 
-		.day {
-			@include span(3 of 6);
+		.featured-section {
+			@include container;
 
-			&:nth-child(2n) {
-				@include span(3 of 6 last);
+			.block {
+				@include span(4 of 12);
+
+				&:nth-child(3n) {
+					@include span(4 of 12 last);
+					float: left;
+				}
 			}
 		}
 	}
 }
 
+
+/*--------------------------------------------------------------
+# Weekly Schedule
+--------------------------------------------------------------*/
 @media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
 	#weekly-schedule {
 		@include container;
@@ -255,24 +251,25 @@ html, body {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {}
+#footer {
+	.site-branding {
+		float: none;
+	}
+}
 
 @media screen and (max-width: $tablet__max) {
 	#footer {
-		// padding-left: $tablet__gutter;
-		// padding-right: $tablet__gutter;
+
 	}
 }
 @media screen and (min-width: $desktop__min) {
 	#footer {
-		// padding-left: $desktop__gutter;
-		// padding-right: $desktop__gutter;
+
 	}
 }
 
 @media screen and (min-width: $desktop__max) {
 	#footer {
-		// width: 80%;
-		// margin: 0 auto;
+
 	}
 }

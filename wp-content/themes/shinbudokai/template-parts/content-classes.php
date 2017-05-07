@@ -50,19 +50,19 @@
 
 			<p>
 				<span class="tag basic-aikido"></span>
-				Basic Aikido/Genkido (all&nbsp;levels)
+				Basic Aikido/Genkido<!--  (all&nbsp;levels) -->
 			</p>
 			<p>
 				<span class="tag advanced-aikido"></span>
-				Advanced Aikido (3rd&nbsp;kyu&nbsp;&amp;&nbsp;up)
+				Advanced Aikido<!--  (3rd&nbsp;kyu&nbsp;&amp;&nbsp;up) -->
 			</p>
 			<p>
 				<span class="tag basic-weapons"></span>
-				Basic Weapons (all&nbsp;levels)
+				Basic Weapons<!--  (all&nbsp;levels) -->
 			</p>
 			<p>
 				<span class="tag advanced-weapons"></span>
-				Advanced Weapons (3rd&nbsp;kyu&nbsp;&amp;&nbsp;up)
+				Advanced Weapons<!--  (3rd&nbsp;kyu&nbsp;&amp;&nbsp;up) -->
 			</p>
 		</div>
 	</div><!-- #weekly-schedule -->

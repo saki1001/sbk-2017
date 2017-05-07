@@ -27,6 +27,9 @@
 	margin: 0 0 1.5em;
 }
 
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
 .home {
 	#main {
 		margin-bottom: $space-double;
@@ -35,7 +38,7 @@
 			font-family: $font__header;
 			font-style: italic;
 			color: $medGray;
-			margin: 50px 0;
+			margin: $space 0 $space-double;
 		}
 
 		h3 {
@@ -48,16 +51,36 @@
 	}
 }
 
+@media screen and (min-width: $tablet__min) {
+	.home {
+		#main {
+			h2 {
+				margin: 50px 0;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Instructor
+--------------------------------------------------------------*/
+.page-instructor {
+	h1 {
+		margin-top: $space-double
+	}
+}
+
+/*--------------------------------------------------------------
+# Classes
+--------------------------------------------------------------*/
 .page-classes {
 	#weekly-schedule {
 		.day {
-			background: $lightGray;
-			margin-bottom: $space;
+			margin-bottom: $space-double;
 			position: relative;
 
 			&.legend {
 				background: transparent;
-				padding: $space-half $space;
 
 				.legend-header {
 					font-weight: bold;
@@ -77,47 +100,70 @@
 		}
 
 		.tag {
-			background: $black;
-			width: 10px;
-			height: 10px;
-			border-radius: 20px;
 			display: inline-block;
 
 			&.basic-aikido,
 			&.genkido {
+				width: 10px;
+				height: 10px;
+				border-radius: 20px;
 				background: $red;
 			}
 
 			&.advanced-aikido {
+				width: 10px;
+				height: 10px;
 				background: $purple;
 			}
 
 			&.basic-weapons {
-				background: $yellow;
+				width: 0;
+				height: 0;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-bottom: 12px solid $yellow;
 			}
 
 			&.advanced-weapons {
-				background: $brightGreen;
+				width: 0;
+				height: 0;
+				border: 5px solid transparent;
+				border-bottom: 8px solid $brightGreen;
+				position: relative;
+				top: -5px;
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 8px;
+					left: -5px;
+					width: 0;
+					height: 0;
+					border: 5px solid transparent;
+					border-top: 8px solid $brightGreen;
+				}
 			}
 		}
 
 		.day-header {
 			font-weight: bold;
 			text-transform: uppercase;
-			background: $grayC;
-			padding: $space-half $space;
 			text-align: right;
+			border-bottom: solid 1px $black;
+			padding-bottom: 4px;
 
 			p {
 				margin: 0;
 				position: absolute;
-				left: $space;
 			}
 		}
 
 		.day-body {
 			font-size: 16px;
-			padding: $space-half $space;
+
+			p {
+				margin-bottom: $space;
+			}
 
 			.teacher {
 				font-style: italic;
@@ -133,14 +179,36 @@
 	}
 }
 
-@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
+@media screen and (min-width: $tablet__min) {
 	.page-classes {
 		#weekly-schedule {
 			.day {
-				height: 200px;
+				background: $lightGray;
+				margin-bottom: $space;
+			}
+
+			.day-header {
+				border-bottom: none;
+				background: $grayC;
+				padding: $space-half $space;
+
+				&.legend {
+					padding: $space-half $space;
+				}
+
+				p {
+					left: $space;
+				}
 			}
 
 			.day-body {
+				padding: $space-half $space;
+
+
+				p {
+					margin-bottom: $space-double;
+				}
+
 				.teacher {
 					position: absolute;
 					bottom: 0;
@@ -150,17 +218,12 @@
 	}
 }
 
+
 @media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
 	.page-classes {
 		#weekly-schedule {
 			.day {
 				height: 240px;
-			}
-			.day-body {
-				.teacher {
-					position: absolute;
-					bottom: 0;
-				}
 			}
 		}
 	}
@@ -171,13 +234,6 @@
 		#weekly-schedule {
 			.day {
 				height: 180px;
-			}
-
-			.day-body {
-				.teacher {
-					position: absolute;
-					bottom: 0;
-				}
 			}
 		}
 	}
