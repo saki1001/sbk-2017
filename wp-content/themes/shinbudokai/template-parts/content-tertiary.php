@@ -89,13 +89,16 @@
 						$title = $block['title'];
 						$subtitle = $block['subtitle'];
 						$description = $block['description'];
+						$video = $block['video'];
 				?>
 					<div class="block">
 						<figure>
 							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+							<?php echo ($video ? '<a class="video-link" data-fancybox href="' . $video . '"></a>' : null); ?>
 						</figure>
 						<p class="title">
 							<?php echo $title; ?>
+							<?php echo ($subtitle ? '<br><em>' . $subtitle . '</em>' : null); ?>
 						</p>
 						<?php echo $description; ?>
 					</div><!-- .block -->

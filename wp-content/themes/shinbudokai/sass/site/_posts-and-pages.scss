@@ -70,6 +70,48 @@
 	}
 }
 
+@media screen and (min-width: $desktop__min) {
+	.page-instructor {
+		aside {
+			position: relative; 
+
+			figure {
+				margin: 0;
+			}
+
+			.top-image,
+			.bottom-image {
+				width: 100%;
+				text-align: right;
+
+				img,
+				figcaption {
+					width: 60%;
+				}
+
+				figcaption {
+					display: inline-block;
+				}
+			}
+
+			.top-image {
+				position: absolute;
+				right: 0;
+			}
+
+			.middle-image {
+				width: 80%;
+				margin-top: 90px;
+
+				img {
+					border: solid $green $sidebar_border-width;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
 /*--------------------------------------------------------------
 # Classes
 --------------------------------------------------------------*/
