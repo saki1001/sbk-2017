@@ -247,7 +247,7 @@ h3 {
 
 p {
   margin-top: 8px;
-  margin-bottom: 32px; }
+  margin-bottom: 16px; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -255,7 +255,8 @@ dfn, cite, em, i {
 figcaption {
   font-size: 12px;
   font-style: italic;
-  text-align: center; }
+  text-align: center;
+  margin-top: 4px; }
 
 blockquote {
   margin: 0 1.5em; }
@@ -338,7 +339,7 @@ html, body {
 # Header
 --------------------------------------------------------------*/
 @media screen and (max-width: 550px) {
-  #header .site-branding {
+  .site-branding {
     width: 50%; } }
 
 @media screen and (min-width: 551px) {
@@ -358,7 +359,7 @@ html, body {
       float: right; } }
 
 /*--------------------------------------------------------------
-# Main Content / Banner
+# Banner / Main Content / Sidebar
 --------------------------------------------------------------*/
 #content {
   position: relative; }
@@ -379,6 +380,24 @@ html, body {
   #secondary {
     width: 32.516222062%;
     float: right;
+    margin-right: 0; }
+  .page-visit #primary {
+    width: 48.1152993348%;
+    float: left;
+    margin-right: 3.7694013304%; }
+  .page-visit #secondary {
+    width: 48.1152993348%;
+    float: right;
+    margin-right: 0; } }
+
+@media screen and (min-width: 769px) {
+  .page-visit #primary {
+    width: 29.9401197605%;
+    float: left;
+    margin-right: 5.0898203593%; }
+  .page-visit #secondary {
+    width: 64.9700598802%;
+    float: right;
     margin-right: 0; } }
 
 @media screen and (min-width: 1200px) {
@@ -389,6 +408,9 @@ html, body {
 /*--------------------------------------------------------------
 # Tertiary
 --------------------------------------------------------------*/
+#affiliate-dojos {
+  width: 100%; }
+
 @media screen and (min-width: 551px) and (max-width: 768px) {
   #tertiary .featured-section {
     max-width: 100%;
@@ -406,7 +428,15 @@ html, body {
         width: 49.3871665465%;
         float: right;
         margin-right: 0;
-        float: left; } }
+        float: left; }
+    #tertiary .featured-section .dojos {
+      width: 49.3871665465%;
+      float: left;
+      margin-right: 1.225666907%; }
+    #tertiary .featured-section .sidebar {
+      width: 49.3871665465%;
+      float: right;
+      margin-right: 0; } }
 
 @media screen and (min-width: 769px) {
   #tertiary .featured-section {
@@ -425,7 +455,17 @@ html, body {
         width: 32.516222062%;
         float: right;
         margin-right: 0;
-        float: left; } }
+        float: left; }
+    #tertiary .featured-section .dojos {
+      width: 75%;
+      float: left; }
+      #tertiary .featured-section .dojos .dojo {
+        width: 42%;
+        margin-right: 4%;
+        float: left; }
+    #tertiary .featured-section .sidebar {
+      width: 25%;
+      float: left; } }
 
 /*--------------------------------------------------------------
 # Weekly Schedule
@@ -471,6 +511,18 @@ html, body {
 --------------------------------------------------------------*/
 #footer .site-branding {
   float: none; }
+
+@media screen and (min-width: 551px) {
+  #footer .site-branding {
+    clear: both; }
+  #footer .site-info {
+    width: 48.1152993348%;
+    float: left;
+    margin-right: 3.7694013304%; }
+  #footer #map {
+    width: 48.1152993348%;
+    float: right;
+    margin-right: 0; } }
 
 /*--------------------------------------------------------------
 # Elements
@@ -866,6 +918,9 @@ header .inner {
   clear: both;
   margin: 0 0 1.5em; }
 
+.page-template-default #primary {
+  margin-top: 16px; }
+
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
@@ -890,33 +945,6 @@ header .inner {
 --------------------------------------------------------------*/
 .page-instructor h1 {
   margin-top: 32px; }
-
-@media screen and (min-width: 769px) {
-  .page-instructor aside {
-    position: relative; }
-    .page-instructor aside figure {
-      margin: 0; }
-    .page-instructor aside .top-image,
-    .page-instructor aside .bottom-image {
-      width: 100%;
-      text-align: right; }
-      .page-instructor aside .top-image img,
-      .page-instructor aside .top-image figcaption,
-      .page-instructor aside .bottom-image img,
-      .page-instructor aside .bottom-image figcaption {
-        width: 60%; }
-      .page-instructor aside .top-image figcaption,
-      .page-instructor aside .bottom-image figcaption {
-        display: inline-block; }
-    .page-instructor aside .top-image {
-      position: absolute;
-      right: 0; }
-    .page-instructor aside .middle-image {
-      width: 80%;
-      margin-top: 90px; }
-      .page-instructor aside .middle-image img {
-        border: solid #8a886e 8px;
-        display: block; } }
 
 /*--------------------------------------------------------------
 # Classes
@@ -1020,6 +1048,20 @@ header .inner {
     height: 180px; } }
 
 /*--------------------------------------------------------------
+# Visit
+--------------------------------------------------------------*/
+.page-visit #primary {
+  margin-bottom: 32px; }
+
+#affiliate-dojos .dojo {
+  margin-bottom: 32px; }
+  #affiliate-dojos .dojo h4 {
+    text-transform: uppercase;
+    margin-bottom: 8px; }
+  #affiliate-dojos .dojo p {
+    margin-bottom: 8px; }
+
+/*--------------------------------------------------------------
 ## Sidebar
 --------------------------------------------------------------*/
 #secondary {
@@ -1053,9 +1095,47 @@ header .inner {
       #secondary .sidebar.schedule ul.simcal-events .simcal-event-description {
         font-style: italic; }
 
+@media screen and (max-width: 768px) {
+  #secondary .dojo-image {
+    text-align: center; }
+    #secondary .dojo-image img,
+    #secondary .dojo-image figcaption {
+      max-width: 300px;
+      display: inline-block; } }
+
 @media screen and (min-width: 769px) {
-  #secondary .sidebar {
-    padding: 16px 32px 32px; } }
+  #secondary {
+    position: relative; }
+    #secondary .sidebar {
+      padding: 16px 32px 32px; }
+    #secondary figure {
+      margin: 0; }
+    #secondary .top-image,
+    #secondary .bottom-image {
+      width: 100%;
+      text-align: right; }
+      #secondary .top-image img,
+      #secondary .top-image figcaption,
+      #secondary .bottom-image img,
+      #secondary .bottom-image figcaption {
+        width: 60%; }
+      #secondary .top-image figcaption,
+      #secondary .bottom-image figcaption {
+        display: inline-block; }
+    #secondary .top-image {
+      position: absolute;
+      right: 0; }
+    #secondary .middle-image {
+      width: 80%;
+      margin-top: 90px; }
+      #secondary .middle-image img {
+        border: solid #8a886e 8px;
+        display: block; }
+    #secondary .dojo-image {
+      width: 40%;
+      position: absolute;
+      top: 80px;
+      right: 0; } }
 
 /*--------------------------------------------------------------
 ## Sections
@@ -1081,38 +1161,60 @@ header .inner {
       display: table;
       table-layout: fixed;
       margin-bottom: 16px; }
-    #tertiary .featured-section .block figure {
-      width: 100%;
-      margin: 0 0 16px 0;
-      position: relative; }
-      #tertiary .featured-section .block figure a.video-link {
+    #tertiary .featured-section .block {
+      margin-bottom: 16px; }
+      #tertiary .featured-section .block figure {
         width: 100%;
-        height: 100%;
-        background: url("../images/play-icon.png") no-repeat center center;
-        position: absolute;
-        top: 0;
-        z-index: 3; }
-      #tertiary .featured-section .block figure img {
-        max-width: 100%;
-        max-height: 100%;
-        height: auto; }
-    #tertiary .featured-section .block .name,
-    #tertiary .featured-section .block .title {
-      font-weight: bold;
-      margin-bottom: 8px; }
-    #tertiary .featured-section .block .rank {
-      font-style: italic; }
-    #tertiary .featured-section .block .description {
-      font-size: 14px; }
+        margin: 0 0 16px 0;
+        position: relative; }
+        #tertiary .featured-section .block figure a.video-link {
+          width: 100%;
+          height: 100%;
+          background: url("../images/play-icon.png") no-repeat center center;
+          position: absolute;
+          top: 0;
+          z-index: 3; }
+        #tertiary .featured-section .block figure img {
+          max-width: 100%;
+          max-height: 100%;
+          height: auto;
+          display: block; }
+      #tertiary .featured-section .block .name,
+      #tertiary .featured-section .block .title {
+        font-weight: bold;
+        margin-bottom: 8px; }
+      #tertiary .featured-section .block .rank {
+        font-style: italic; }
+      #tertiary .featured-section .block .description {
+        font-size: 14px; }
 
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 #footer {
+  margin-top: 32px;
   color: #f4f4f4;
   background-color: #333;
   padding-top: 32px;
   padding-bottom: 32px; }
+  #footer a {
+    text-decoration: none; }
+    #footer a:hover {
+      color: #cc0000; }
+  #footer #menu-2 {
+    list-style: none;
+    margin: 32px 0;
+    padding: 0; }
+    #footer #menu-2 li {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: inline-block; }
+      #footer #menu-2 li:after {
+        color: #777;
+        content: " | "; }
+      #footer #menu-2 li:last-child:after {
+        content: ""; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -1190,5 +1292,17 @@ object {
 
 .gallery-caption {
   display: block; }
+
+/*--------------------------------------------------------------
+## Maps
+--------------------------------------------------------------*/
+#map {
+  height: 100%;
+  min-height: 300px;
+  border: solid #8a886e 8px; }
+
+@media screen and (min-width: 769px) {
+  .page-visit #map {
+    width: 80%; } }
 
 /*# sourceMappingURL=style.css.map */

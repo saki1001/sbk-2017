@@ -87,10 +87,8 @@ html, body {
 # Header
 --------------------------------------------------------------*/
 @media screen and (max-width: $mobile_large__max) {
-	#header {
-		.site-branding {
-			width: 50%;
-		}
+	.site-branding {
+		width: 50%;
 	}
 }
 
@@ -102,6 +100,7 @@ html, body {
 			bottom: -$header_border-height;
 		}
 	}
+
 	.site-branding {
 		@include span(3 of 12);
 	}
@@ -117,7 +116,7 @@ html, body {
 
 
 /*--------------------------------------------------------------
-# Main Content / Banner
+# Banner / Main Content / Sidebar
 --------------------------------------------------------------*/
 #content {
 	position: relative;
@@ -129,35 +128,39 @@ html, body {
 	left: -2.5%
 }
 
-#primary {
-	
-}
-
 #main {
 	min-height: 400px;
 }
 
-@media screen and (max-width: $mobile_small__max) {
-
-}
-
-@media screen and (min-width: $mobile_large__min) and (max-width: $mobile_large__max) {
-
-}
-
 @media screen and (min-width: $tablet__min) {
-	#content {
-		
-	}
-
 	#primary {
-		// @include show-grid(16);
 		@include span(7 of 12);
 	}
 
 	#secondary {
-		// @include show-grid(16);
 		@include span(4 of 12 last);
+	}
+
+	.page-visit {
+		#primary {
+			@include span(2 of 4);
+		}
+
+		#secondary {
+			@include span(2 of 4 last);
+		}
+	}
+}
+
+@media screen and (min-width: $desktop__min) {
+	.page-visit {
+		#primary {
+			@include span(1 of 3);
+		}
+
+		#secondary {
+			@include span(2 of 3 last);
+		}
 	}
 }
 
@@ -174,7 +177,8 @@ html, body {
 /*--------------------------------------------------------------
 # Tertiary
 --------------------------------------------------------------*/
-#student-profiles {
+#affiliate-dojos {
+	width: 100%;
 }
 
 @media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
@@ -191,6 +195,14 @@ html, body {
 					@include span(6 of 12 last);
 					float: left;
 				}
+			}
+
+			.dojos {
+				@include span(6 of 12);
+			}
+
+			.sidebar {
+				@include span(6 of 12 last);
 			}
 		}
 	}
@@ -210,6 +222,22 @@ html, body {
 					@include span(4 of 12 last);
 					float: left;
 				}
+			}
+
+			.dojos {
+				width: 75%;
+				float: left;
+
+				.dojo {
+					width: 42%;
+					margin-right: 4%;
+					float: left;
+				}
+			}
+
+			.sidebar {
+				width: 25%;
+				float: left;
 			}
 		}
 	}
@@ -258,13 +286,21 @@ html, body {
 }
 
 @media screen and (max-width: $tablet__max) {
-	#footer {
-
-	}
 }
-@media screen and (min-width: $desktop__min) {
-	#footer {
 
+@media screen and (min-width: $tablet__min) {
+	#footer {
+		.site-branding {
+			clear: both;
+		}
+
+		.site-info {
+			@include span(2 of 4);
+		}
+
+		#map {
+			@include span(2 of 4 last);
+		}
 	}
 }
 

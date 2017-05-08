@@ -25,6 +25,9 @@ while ( have_posts() ) : the_post();
 	elseif ( is_page('classes') ) :
 		get_template_part( 'template-parts/content', 'classes' );
 
+	elseif ( is_page('visit') ) :
+		get_template_part( 'template-parts/content', 'visit' );
+
 	else :
 			get_template_part( 'template-parts/content', 'page' );
 

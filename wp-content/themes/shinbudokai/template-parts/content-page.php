@@ -10,7 +10,9 @@
 ?>
 
 	<div id="primary" class="content-area">
-
+		
+		<h1><?php echo the_title(); ?></h1>
+		
 		<main id="main" class="site-main" role="main">
 
 		<?php

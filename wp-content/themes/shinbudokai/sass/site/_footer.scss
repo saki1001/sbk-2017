@@ -1,10 +1,39 @@
 #footer {
+	margin-top: $space-double;
 	color: $color__footer-text;
 	background-color: $color__footer-bg;
 	padding-top: $space-double;
 	padding-bottom: $space-double;
 
-	.inner {
+	a {
+		text-decoration: none;
 
+		&:hover {
+			color: $brightRed;
+		}
+	}
+
+	#menu-2 {
+		list-style: none;
+		margin: $space-double 0;
+		padding: 0;
+
+		li {
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+			display: inline-block;
+
+			&:after {
+				color: $medGray;
+				content: " | ";
+			}
+
+			&:last-child {
+				&:after {
+					content: "";
+				}				
+			}
+		}
 	}
 }

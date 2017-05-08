@@ -48,7 +48,7 @@
 			'label'                 => 'Student',
 			'description'           => 'A post that contains a title, image and description of a student',
 			'labels'                => $labels,
-			'supports'              => array( 'title', 'author', 'excerpt', 'thumbnail' ),
+			'supports'              => array( 'title', 'author', 'editor', 'excerpt', 'thumbnail' ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,

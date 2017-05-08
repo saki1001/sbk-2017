@@ -1,6 +1,6 @@
 p {
 	margin-top: $space-half;
-	margin-bottom: $space-double;
+	margin-bottom: $space;
 }
 
 dfn, cite, em, i {
@@ -11,6 +11,7 @@ figcaption {
 	font-size: 12px;
 	font-style: italic;
 	text-align: center;
+	margin-top: 4px;
 }
 
 blockquote {

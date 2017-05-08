@@ -44,13 +44,16 @@
 					foreach( $profiles as $profile ) :
 						$ID = $profile->ID;
 						$name = $profile->post_title;
+						$noImage = '<img src="' . get_template_directory_uri() . '/images/no-image.png" alt="no image placeholder" />';
+						$thumbnail = get_the_post_thumbnail($ID);
+						$image = $thumbnail ? $thumbnail : $noImage;
 						$caption = get_post(get_post_thumbnail_id($ID))->post_excerpt;
 						$rank = get_field('rank', $ID);
 						$description = $profile->post_excerpt;
 				?>
 					<div class="block">
 						<figure>
-							<?php echo get_the_post_thumbnail($ID); ?>
+							<?php echo $image; ?>
 							<figcaption>
 								<?php echo $caption; ?>
 							</figcaption>

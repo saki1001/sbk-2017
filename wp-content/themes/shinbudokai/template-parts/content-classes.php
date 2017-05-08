@@ -27,7 +27,6 @@
 				<p><?php echo $dayName; ?></p>
 			<?php
 				foreach( $tags as $tag ) :
-					error_log(print_r($tag, true));
 			?>
 				<span class="tag <?php echo $tag; ?>"></span>
 			<?php

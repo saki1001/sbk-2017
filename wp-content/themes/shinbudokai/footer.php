@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="footer" class="site-footer" role="contentinfo">
-		<div class="site-info inner">
+		<div class="inner">
 			<div class="site-branding">
 				<p class="site-title">
 					<a href="/">
@@ -23,32 +23,33 @@
 				</p>
 			</div>
 
-			<p>
-				77 8th Ave (on the corner of 14th St)
-				New York, NY
-			</p>
+			<div class="site-info">
+				<p>
+					77 8th Ave. (on the corner of 14th St)
+					New York, NY
+				</p>
 
-			<p>
-				(212) 444-4444
-				info@shinbudokai.org
-			</p>
+				<p>(212) 691-1378</p>
 
-			<p>
-				Easily accessible by the A,C,E and L trains
-				M14A and M14D buses
-			</p>
+				<p>
+					<a href="mailto:info@shinbudokai.org">info@shinbudokai.org</a>
+				</p>
 
-			<p>
-				Open hours:
-				M - F 6-8pm
-				Sat. 11:30 - 1pm
-				Sun. 12:30 - 2pm
-			</p>
+			<?php
+				wp_nav_menu( array( 'theme_location' => 'header', 'menu_id' => 'menu-2'  ) );
+			?>
 
-			<p>
-				See full schedule <a href="/classes">here</a>
-			</p>
-		</div><!-- .site-info -->
+			</div><!-- .site-info -->
+
+    <?php
+    	if( !is_page('visit') ) {
+    ?>
+    	<div id="map"></div><!-- #map -->
+    <?php
+    	}
+    ?>
+
+		</div><!-- .inner -->
 	</footer><!-- #footer -->
 </div><!-- #page -->
 

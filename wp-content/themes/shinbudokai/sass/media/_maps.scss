@@ -1,0 +1,13 @@
+#map {
+	height: 100%;
+	min-height: 300px;
+	border: solid $green $sidebar_border-width;
+}
+
+@media screen and (min-width: $desktop__min) {
+	.page-visit {
+		#map {
+			width: 80%;
+		}	
+	}
+}

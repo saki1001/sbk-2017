@@ -50,11 +50,69 @@
 	}
 }
 
+@media screen and (max-width: $tablet__max) {
+	#secondary {
+		// Visit Page
+		.dojo-image {
+			text-align: center;
+
+			img,
+			figcaption {
+				max-width: 300px;
+				display: inline-block;
+			}
+		}
+	}
+}
+
 @media screen and (min-width: $desktop__min) {
 	#secondary {
+		position: relative;
 
 		.sidebar {
 			padding: $space $space-double $space-double;
+		}
+
+		figure {
+			margin: 0;
+		}
+
+		.top-image,
+		.bottom-image {
+			width: 100%;
+			text-align: right;
+
+			img,
+			figcaption {
+				width: 60%;
+			}
+
+			figcaption {
+				display: inline-block;
+			}
+		}
+
+		.top-image {
+			position: absolute;
+			right: 0;
+		}
+
+		.middle-image {
+			width: 80%;
+			margin-top: 90px;
+
+			img {
+				border: solid $green $sidebar_border-width;
+				display: block;
+			}
+		}
+
+		// Visit Page
+		.dojo-image {
+			width: 40%;
+			position: absolute;
+			top: 80px;
+			right: 0;
 		}
 	}
 }
