@@ -242,7 +242,7 @@ h2, h3 {
 
 h3 {
   font-family: "Noto Sans", sans-serif;
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 700; }
 
 p {
@@ -291,6 +291,12 @@ mark, ins {
 big {
   font-size: 125%; }
 
+.blurb {
+  font-size: 20px;
+  font-style: italic;
+  color: #777;
+  margin-bottom: 32px; }
+
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -328,31 +334,49 @@ html, body {
 #footer .inner {
   padding: 0 2%; }
 
-@media screen and (min-width: 1200px) {
-  #header .inner,
-  #content,
-  #footer .inner {
-    padding-left: 0;
-    padding-right: 0; } }
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .site-branding {
-    width: 50%; } }
+    width: 100%; }
+    .site-branding .site-title {
+      width: 230px; } }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 651px) {
   #header .main-navigation {
     position: absolute;
     right: 16px;
     bottom: -6px; }
+  .main-navigation ul {
+    float: right; } }
+
+@media screen and (min-width: 651px) and (max-width: 1000px) {
   .site-branding {
-    width: 24.0807498198%;
+    width: 40%;
+    margin-right: 16px; }
+    .site-branding .site-title {
+      width: 230px; }
+  .main-navigation {
+    width: 60%; }
+    .main-navigation ul {
+      float: right; } }
+
+@media screen and (min-width: 1001px) {
+  .site-branding {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    width: 49.3871665465%;
     float: left;
     margin-right: 1.225666907%; }
+    .site-branding .site-title,
+    .site-branding .site-description {
+      width: 46%;
+      margin-right: 2%;
+      float: left; }
   .main-navigation {
-    width: 74.6935832733%;
+    width: 49.3871665465%;
     float: right;
     margin-right: 0; }
     .main-navigation ul {
@@ -372,13 +396,22 @@ html, body {
 #main {
   min-height: 400px; }
 
+.page-shop #primary {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .page-shop #primary:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
 @media screen and (min-width: 551px) {
   #primary {
-    width: 57.8226387888%;
+    width: 46.0829493088%;
     float: left;
-    margin-right: 1.225666907%; }
+    margin-right: 7.8341013825%; }
   #secondary {
-    width: 32.516222062%;
+    width: 46.0829493088%;
     float: right;
     margin-right: 0; }
   .page-visit #primary {
@@ -388,7 +421,33 @@ html, body {
   .page-visit #secondary {
     width: 48.1152993348%;
     float: right;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .page-shop #primary {
+    width: 100%;
+    float: none; }
+    .page-shop #primary .featured-products.list .product {
+      content: "";
+      display: table;
+      table-layout: fixed; }
+    .page-shop #primary .featured-products.list figure {
+      width: 31.6788321168%;
+      float: left;
+      margin-right: 2.4817518248%; }
+    .page-shop #primary .featured-products.list .info {
+      width: 65.8394160584%;
+      float: right;
+      margin-right: 0; }
+    .page-shop #primary .featured-products.grid .product {
+      margin-right: 2%;
+      min-height: 400px;
+      float: left; } }
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
+  .page-shop #primary .featured-products.grid .product {
+    width: 48%;
+    margin-right: 2%; }
+    .page-shop #primary .featured-products.grid .product:nth-child(2n) {
+      margin-right: 0; } }
 
 @media screen and (min-width: 769px) {
   .page-visit #primary {
@@ -398,7 +457,12 @@ html, body {
   .page-visit #secondary {
     width: 64.9700598802%;
     float: right;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .page-shop #primary .featured-products.grid .product {
+    width: 32%;
+    margin-right: 2%; }
+    .page-shop #primary .featured-products.grid .product:nth-child(3n) {
+      margin-right: 0; } }
 
 @media screen and (min-width: 1200px) {
   #banner .image {
@@ -736,7 +800,7 @@ header .inner {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .main-navigation {
     text-align: center; }
     .main-navigation li {
@@ -750,7 +814,7 @@ header .inner {
     .main-navigation .current-menu-ancestor > a {
       color: #dd624c; } }
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 651px) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -758,8 +822,7 @@ header .inner {
   .main-navigation li {
     float: left; }
   .main-navigation a {
-    border-bottom: solid #777 6px;
-    padding: 28px 16px 16px 16px; }
+    border-bottom: solid #777 6px; }
   .main-navigation a:hover,
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
@@ -767,6 +830,16 @@ header .inner {
   .main-navigation .current-menu-ancestor > a {
     border-bottom: solid #dd624c 6px;
     background: #e6e6e6; } }
+
+@media screen and (min-width: 651px) and (max-width: 1000px) {
+  .main-navigation a {
+    font-size: 14px;
+    padding: 28px 8px 38px; } }
+
+@media screen and (min-width: 1001px) {
+  .main-navigation a {
+    font-size: 16px;
+    padding: 28px 16px 16px; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -883,14 +956,22 @@ header .inner {
       display: table;
       table-layout: fixed;
       clear: both; }
-  #header .site-branding .site-title {
-    font-size: 0;
-    margin: 0; }
-    #header .site-branding .site-title a {
-      padding: 16px 16px 16px 0;
-      display: block; }
-      #header .site-branding .site-title a:hover {
-        background-color: #e6e6e6; }
+  #header .site-branding {
+    padding: 24px 0 14px; }
+    #header .site-branding .site-title {
+      font-size: 0;
+      margin: 0; }
+      #header .site-branding .site-title a {
+        padding: 0 16px 4px 0;
+        display: block; }
+    #header .site-branding .site-description h2 {
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0 0 0 36px; }
+
+@media screen and (min-width: 1001px) {
+  #header .site-branding .site-description h2 {
+    margin: 7px 0 0 0; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -924,6 +1005,9 @@ header .inner {
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
+.home #banner img {
+  width: 100%; }
+
 .home #main {
   margin-bottom: 32px; }
   .home #main h2 {
@@ -949,102 +1033,104 @@ header .inner {
 /*--------------------------------------------------------------
 # Classes
 --------------------------------------------------------------*/
-.page-classes #weekly-schedule .day {
-  margin-bottom: 32px;
-  position: relative; }
-  .page-classes #weekly-schedule .day.legend {
-    background: transparent; }
-    .page-classes #weekly-schedule .day.legend .legend-header {
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 16px; }
-    .page-classes #weekly-schedule .day.legend .tag {
-      margin-right: 8px; }
-    .page-classes #weekly-schedule .day.legend p {
-      font-size: 14px;
-      margin-bottom: 8px; }
-
-.page-classes #weekly-schedule .tag {
-  display: inline-block; }
-  .page-classes #weekly-schedule .tag.basic-aikido, .page-classes #weekly-schedule .tag.genkido {
-    width: 10px;
-    height: 10px;
-    border-radius: 20px;
-    background: #dd624c; }
-  .page-classes #weekly-schedule .tag.advanced-aikido {
-    width: 10px;
-    height: 10px;
-    background: #584985; }
-  .page-classes #weekly-schedule .tag.basic-weapons {
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 12px solid #EEB060; }
-  .page-classes #weekly-schedule .tag.advanced-weapons {
-    width: 0;
-    height: 0;
-    border: 5px solid transparent;
-    border-bottom: 8px solid #5CAD78;
-    position: relative;
-    top: -5px; }
-    .page-classes #weekly-schedule .tag.advanced-weapons:after {
-      content: '';
-      position: absolute;
-      top: 8px;
-      left: -5px;
+.page-schedule #weekly-schedule {
+  margin-bottom: 32px; }
+  .page-schedule #weekly-schedule .day {
+    margin-bottom: 32px;
+    position: relative; }
+    .page-schedule #weekly-schedule .day.legend {
+      background: transparent; }
+      .page-schedule #weekly-schedule .day.legend .legend-header {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 16px; }
+      .page-schedule #weekly-schedule .day.legend .tag {
+        margin-right: 8px; }
+      .page-schedule #weekly-schedule .day.legend p {
+        font-size: 14px;
+        margin-bottom: 8px; }
+  .page-schedule #weekly-schedule .tag {
+    display: inline-block; }
+    .page-schedule #weekly-schedule .tag.basic-aikido, .page-schedule #weekly-schedule .tag.genkido {
+      width: 10px;
+      height: 10px;
+      border-radius: 20px;
+      background: #dd624c; }
+    .page-schedule #weekly-schedule .tag.advanced-aikido {
+      width: 10px;
+      height: 10px;
+      background: #584985; }
+    .page-schedule #weekly-schedule .tag.basic-weapons {
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 12px solid #EEB060; }
+    .page-schedule #weekly-schedule .tag.advanced-weapons {
       width: 0;
       height: 0;
       border: 5px solid transparent;
-      border-top: 8px solid #5CAD78; }
+      border-bottom: 8px solid #5CAD78;
+      position: relative;
+      top: -5px; }
+      .page-schedule #weekly-schedule .tag.advanced-weapons:after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: -5px;
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-top: 8px solid #5CAD78; }
+  .page-schedule #weekly-schedule .day-header {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+    border-bottom: solid 1px #404040;
+    padding-bottom: 4px; }
+    .page-schedule #weekly-schedule .day-header p {
+      margin: 0;
+      position: absolute; }
+  .page-schedule #weekly-schedule .day-body {
+    font-size: 16px; }
+    .page-schedule #weekly-schedule .day-body p {
+      margin-bottom: 16px; }
+    .page-schedule #weekly-schedule .day-body .teacher {
+      font-style: italic;
+      margin-bottom: 16px; }
 
-.page-classes #weekly-schedule .day-header {
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: right;
-  border-bottom: solid 1px #404040;
-  padding-bottom: 4px; }
-  .page-classes #weekly-schedule .day-header p {
-    margin: 0;
-    position: absolute; }
-
-.page-classes #weekly-schedule .day-body {
-  font-size: 16px; }
-  .page-classes #weekly-schedule .day-body p {
-    margin-bottom: 16px; }
-  .page-classes #weekly-schedule .day-body .teacher {
-    font-style: italic;
-    margin-bottom: 16px; }
-
-.page-classes #main td {
+.page-schedule #main td {
   padding: 5px 0; }
 
+.page-schedule #primary {
+  margin-bottom: 32px; }
+
 @media screen and (min-width: 551px) {
-  .page-classes #weekly-schedule .day {
+  .page-schedule #weekly-schedule .day {
     background: #e6e6e6;
     margin-bottom: 16px; }
-  .page-classes #weekly-schedule .day-header {
+  .page-schedule #weekly-schedule .day-header {
     border-bottom: none;
     background: #CCC;
     padding: 8px 16px; }
-    .page-classes #weekly-schedule .day-header.legend {
+    .page-schedule #weekly-schedule .day-header.legend {
       padding: 8px 16px; }
-    .page-classes #weekly-schedule .day-header p {
+    .page-schedule #weekly-schedule .day-header p {
       left: 16px; }
-  .page-classes #weekly-schedule .day-body {
+  .page-schedule #weekly-schedule .day-body {
     padding: 8px 16px; }
-    .page-classes #weekly-schedule .day-body p {
+    .page-schedule #weekly-schedule .day-body p {
       margin-bottom: 32px; }
-    .page-classes #weekly-schedule .day-body .teacher {
+    .page-schedule #weekly-schedule .day-body .teacher {
       position: absolute;
       bottom: 0; } }
 
 @media screen and (min-width: 551px) and (max-width: 768px) {
-  .page-classes #weekly-schedule .day {
+  .page-schedule #weekly-schedule .day {
     height: 240px; } }
 
 @media screen and (min-width: 769px) {
-  .page-classes #weekly-schedule .day {
+  .page-schedule #weekly-schedule .day {
     height: 180px; } }
 
 /*--------------------------------------------------------------
@@ -1060,6 +1146,12 @@ header .inner {
     margin-bottom: 8px; }
   #affiliate-dojos .dojo p {
     margin-bottom: 8px; }
+
+/*--------------------------------------------------------------
+# Shop
+--------------------------------------------------------------*/
+.page-shop .blurb strong {
+  color: #dd624c; }
 
 /*--------------------------------------------------------------
 ## Sidebar
@@ -1138,6 +1230,68 @@ header .inner {
       right: 0; } }
 
 /*--------------------------------------------------------------
+## Products
+--------------------------------------------------------------*/
+.featured-products {
+  margin-top: 32px;
+  clear: both; }
+  .featured-products h3 {
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: solid 1px #777; }
+  .featured-products .blurb {
+    margin-bottom: 32px; }
+  .featured-products .products {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    margin-bottom: 16px; }
+  .featured-products .product {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    margin-bottom: 32px; }
+    .featured-products .product figure {
+      width: 100%;
+      margin: 0 0 16px 0;
+      position: relative; }
+      .featured-products .product figure a.video-link {
+        width: 100%;
+        height: 100%;
+        background: url("../images/play-icon.png") no-repeat center center;
+        position: absolute;
+        top: 0;
+        z-index: 3; }
+      .featured-products .product figure img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        display: block; }
+    .featured-products .product .name {
+      font-weight: bold;
+      margin-bottom: 8px; }
+    .featured-products .product .subtitle {
+      font-style: italic; }
+    .featured-products .product .description,
+    .featured-products .product .price {
+      font-size: 14px; }
+    .featured-products .product .shopify-buy-frame,
+    .featured-products .product .price {
+      float: left; }
+    .featured-products .product .shopify-buy-frame {
+      max-width: 140px !important; }
+    .featured-products .product .price {
+      margin-top: 32px; }
+  .featured-products.list {
+    content: "";
+    display: table;
+    table-layout: fixed; }
+  .featured-products.grid {
+    content: "";
+    display: table;
+    table-layout: fixed; }
+
+/*--------------------------------------------------------------
 ## Sections
 --------------------------------------------------------------*/
 #tertiary {
@@ -1148,9 +1302,6 @@ header .inner {
     padding-bottom: 8px;
     border-bottom: solid 1px #777; }
   #tertiary .blurb {
-    font-size: 20px;
-    font-style: italic;
-    color: #777;
     margin-bottom: 32px; }
   #tertiary .featured-section {
     content: "";
@@ -1162,7 +1313,7 @@ header .inner {
       table-layout: fixed;
       margin-bottom: 16px; }
     #tertiary .featured-section .block {
-      margin-bottom: 16px; }
+      margin-bottom: 32px; }
       #tertiary .featured-section .block figure {
         width: 100%;
         margin: 0 0 16px 0;
@@ -1199,8 +1350,6 @@ header .inner {
   padding-bottom: 32px; }
   #footer a {
     text-decoration: none; }
-    #footer a:hover {
-      color: #cc0000; }
   #footer #menu-2 {
     list-style: none;
     margin: 32px 0;

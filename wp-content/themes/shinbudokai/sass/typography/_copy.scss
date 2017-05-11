@@ -51,3 +51,10 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+.blurb {
+	font-size: 20px;
+	font-style: italic;
+	color: $medGray;
+	margin-bottom: $space-double;
+}

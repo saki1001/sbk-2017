@@ -37,6 +37,12 @@
 # Home
 --------------------------------------------------------------*/
 .home {
+	#banner {
+		img {
+			width: 100%;
+		}
+	}
+
 	#main {
 		margin-bottom: $space-double;
 
@@ -80,8 +86,10 @@
 /*--------------------------------------------------------------
 # Classes
 --------------------------------------------------------------*/
-.page-classes {
+.page-schedule {
 	#weekly-schedule {
+		margin-bottom: $space-double;
+
 		.day {
 			margin-bottom: $space-double;
 			position: relative;
@@ -184,10 +192,14 @@
 			padding: 5px 0;
 		}
 	}
+
+	#primary {
+		margin-bottom: $space-double;
+	}
 }
 
 @media screen and (min-width: $tablet__min) {
-	.page-classes {
+	.page-schedule {
 		#weekly-schedule {
 			.day {
 				background: $lightGray;
@@ -227,7 +239,7 @@
 
 
 @media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
-	.page-classes {
+	.page-schedule {
 		#weekly-schedule {
 			.day {
 				height: 240px;
@@ -237,7 +249,7 @@
 }
 
 @media screen and (min-width: $desktop__min) {
-	.page-classes {
+	.page-schedule {
 		#weekly-schedule {
 			.day {
 				height: 180px;
@@ -267,6 +279,17 @@
 
 		p {
 			margin-bottom: $space-half;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Shop
+--------------------------------------------------------------*/
+.page-shop {
+	.blurb {
+		strong {
+			color: $red;
 		}
 	}
 }

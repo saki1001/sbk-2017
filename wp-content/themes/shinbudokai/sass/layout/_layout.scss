@@ -73,26 +73,30 @@ html, body {
 	padding: 0 2%;
 }
 
-@media screen and (min-width: $desktop__max) {
-	#header .inner,
-	#content,
-	#footer .inner {
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
+// @media screen and (min-width: $desktop__max) {
+// 	#header .inner,
+// 	#content,
+// 	#footer .inner {
+// 		padding-left: 0;
+// 		padding-right: 0;
+// 	}
+// }
 
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-@media screen and (max-width: $mobile_large__max) {
+@media screen and (max-width: $header-mobile_large__max) {
 	.site-branding {
-		width: 50%;
+		width: 100%;
+
+		.site-title {
+			width: 230px;
+		}
 	}
 }
 
-@media screen and (min-width: $tablet__min) {
+@media screen and (min-width: $header-tablet__min) {
 	#header {
 		.main-navigation {
 			position: absolute;
@@ -101,12 +105,47 @@ html, body {
 		}
 	}
 
+	.main-navigation {
+		ul {
+			float: right;
+		}
+	}
+}
+
+@media screen and (min-width: $header-tablet__min) and (max-width: $header-tablet__max) {
 	.site-branding {
-		@include span(3 of 12);
+		width: 40%;
+		margin-right: $space;
+
+		.site-title {
+			width: 230px;
+		}
 	}
 
 	.main-navigation {
-		@include span(9 of 12 last);
+		width: 60%;
+
+		ul {
+			float: right;
+		}
+	}
+}
+
+@media screen and (min-width: $header-desktop__min) {
+	.site-branding {
+		@include clearfix;
+		@include span(6 of 12);
+
+		.site-title,
+		.site-description {
+			width: 46%;
+			margin-right: 2%;
+			float: left;
+		}
+	}
+
+	.main-navigation {
+		@include span(6 of 12 last);
 
 		ul {
 			float: right;
@@ -132,13 +171,19 @@ html, body {
 	min-height: 400px;
 }
 
+.page-shop {
+	#primary {
+		@include container;
+	}
+}
+
 @media screen and (min-width: $tablet__min) {
 	#primary {
-		@include span(7 of 12);
+		@include span(1 of 2);
 	}
 
 	#secondary {
-		@include span(4 of 12 last);
+		@include span(1 of 2 last);
 	}
 
 	.page-visit {
@@ -148,6 +193,56 @@ html, body {
 
 		#secondary {
 			@include span(2 of 4 last);
+		}
+	}
+
+	.page-shop {
+		#primary {
+			width: 100%;
+			float: none;
+
+			.featured-products {
+				&.list {
+					.product {
+						@include clearfix;
+					}
+
+					figure {
+						@include span(2 of 6);
+					}
+
+					.info {
+						@include span(4 of 6 last);
+					}
+				}
+
+				&.grid {
+					.product {
+						margin-right: 2%;
+						min-height: 400px; // min-height and no cols bc prob with buy buttons
+						float: left;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $tablet__min) and (max-width: $tablet__max) {
+	.page-shop {
+		#primary {
+			.featured-products {
+				&.grid {
+					.product {
+						width: 48%;
+						margin-right: 2%;
+
+						&:nth-child(2n) {
+							margin-right: 0;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -160,6 +255,23 @@ html, body {
 
 		#secondary {
 			@include span(2 of 3 last);
+		}
+	}
+
+	.page-shop {
+		#primary {
+			.featured-products {
+				&.grid {
+					.product {
+						width: 32%;
+						margin-right: 2%;
+
+						&:nth-child(3n) {
+							margin-right: 0;
+						}
+					}
+				}
+			}
 		}
 	}
 }

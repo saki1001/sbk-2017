@@ -8,14 +8,19 @@
  * @package shinbudokai
  */
 
+$sections = get_field('sections');
+error_log(print_r('sections', true));
+error_log(print_r($sections, true));
+
+if ( !$sections ) {
+	return;
+}
+
 ?>
 
 	<div id="tertiary" class="featured-content-area">
 
 	<?php
-		$sections = get_field('sections');
-		error_log(print_r($sections, true));
-
 		foreach( $sections as $section ) :
 			$layout = $section['acf_fc_layout'];
 			$title = $section['title'];
@@ -72,6 +77,7 @@
 			<?php
 					break;
 
+				// IMAGES OR VIDEO
 				case 'section_image_video':
 			?>
 				<section id="image-video-blocks" class="featured-section" role="featured-content">

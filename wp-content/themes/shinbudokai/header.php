@@ -65,6 +65,9 @@ $template = get_template_directory_uri();
 					</p>
 				<?php
 				endif; ?>
+				<div class="site-description">
+					<h2><?php echo get_bloginfo('description'); ?></h2>
+				</div>
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">

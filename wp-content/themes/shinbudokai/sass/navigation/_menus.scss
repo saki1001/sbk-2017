@@ -89,7 +89,7 @@ header .inner {
 	display: block;
 }
 
-@media screen and (max-width: $mobile-large__max) {
+@media screen and (max-width: $header-mobile-large__max) {
 	.main-navigation {
 		text-align: center;
 
@@ -109,7 +109,7 @@ header .inner {
 	}
 }
 
-@media screen and (min-width: $tablet__min) {
+@media screen and (min-width: $header-tablet__min) {
 	.menu-toggle {
 		display: none;
 	}
@@ -125,7 +125,6 @@ header .inner {
 
 		a {
 			border-bottom: solid $medGray $header_border-height;
-			padding: ($space+$header_border-height*2) $space $space $space;
 		}
 
 		a:hover,
@@ -135,6 +134,24 @@ header .inner {
 		.current-menu-ancestor > a {
 			border-bottom: solid $red $header_border-height;
 			background: $lightGray;
+		}
+	}
+}
+
+@media screen and (min-width: $header-tablet__min) and (max-width: $header-tablet__max) {
+	.main-navigation {
+		a {
+			font-size: 14px;
+			padding: ($space+$header_border-height*2) $space-half 38px;
+		}
+	}
+}
+
+@media screen and (min-width: $header-desktop__min) {
+	.main-navigation {
+		a {
+			font-size: 16px;
+			padding: ($space+$header_border-height*2) $space $space;
 		}
 	}
 }
