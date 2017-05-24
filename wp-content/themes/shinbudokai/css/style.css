@@ -957,7 +957,7 @@ header .inner {
       table-layout: fixed;
       clear: both; }
   #header .site-branding {
-    padding: 24px 0 14px; }
+    padding: 20px 0 14px; }
     #header .site-branding .site-title {
       font-size: 0;
       margin: 0; }
@@ -971,7 +971,7 @@ header .inner {
 
 @media screen and (min-width: 1001px) {
   #header .site-branding .site-description h2 {
-    margin: 7px 0 0 0; } }
+    margin: 9px 0 0 0; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -1011,7 +1011,6 @@ header .inner {
 .home #main {
   margin-bottom: 32px; }
   .home #main h2 {
-    font-family: "Noto Serif", sans-serif;
     font-style: italic;
     color: #777;
     margin: 16px 0 32px; }
@@ -1210,7 +1209,8 @@ header .inner {
       #secondary .top-image figcaption,
       #secondary .bottom-image img,
       #secondary .bottom-image figcaption {
-        width: 60%; }
+        width: 60%;
+        max-width: 280px; }
       #secondary .top-image figcaption,
       #secondary .bottom-image figcaption {
         display: inline-block; }
@@ -1279,7 +1279,8 @@ header .inner {
     .featured-products .product .price {
       float: left; }
     .featured-products .product .shopify-buy-frame {
-      max-width: 140px !important; }
+      max-width: 140px !important;
+      margin-right: 16px; }
     .featured-products .product .price {
       margin-top: 32px; }
   .featured-products.list {
@@ -1338,6 +1339,8 @@ header .inner {
         font-style: italic; }
       #tertiary .featured-section .block .description {
         font-size: 14px; }
+    #tertiary .featured-section#student-profiles .block {
+      min-height: 500px; }
 
 /*--------------------------------------------------------------
 ## Footer

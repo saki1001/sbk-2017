@@ -64,10 +64,11 @@
 
 		.shopify-buy-frame {
 			max-width: 140px !important;
+			margin-right: $space;
 		}
 
 		.price {
-			margin-top: 32px;
+			margin-top: $space-double;
 		}
 	}
 

@@ -54,7 +54,7 @@ if ( !$sections ) {
 						$image = $thumbnail ? $thumbnail : $noImage;
 						$caption = get_post(get_post_thumbnail_id($ID))->post_excerpt;
 						$rank = get_field('rank', $ID);
-						$description = $profile->post_excerpt;
+						$description = $profile->post_content;
 				?>
 					<div class="block">
 						<figure>

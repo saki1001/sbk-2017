@@ -22,9 +22,14 @@ function initMap() {
     center: {lat: 40.7397, lng: -74.002984},
     zoom: 16,
     scrollwheel: false,
+    draggable: false,
     navigationControl: false,
+    zoomControl: false,
     mapTypeControl: false,
-    scaleControl: false
+    scaleControl: false,
+    streetViewControl: false,
+    rotateControl: false,
+    fullscreenControl: false
   });
 
   var marker = new google.maps.Marker({
