@@ -24,9 +24,6 @@ wp-content/plugins/hello.php
 # ignore node dependency directories (used by grunt)
 node_modules/
 
-# ignore node dependency directories (used by bower)
-bower_components/
-
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
