@@ -1367,6 +1367,9 @@ header .inner {
         content: " | "; }
       #footer #menu-2 li:last-child:after {
         content: ""; }
+  #footer .disclaimer {
+    font-size: 14px;
+    line-height: 1.4; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

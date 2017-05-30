@@ -39,6 +39,8 @@
 				wp_nav_menu( array( 'theme_location' => 'header', 'menu_id' => 'menu-2'  ) );
 			?>
 
+				<p class="disclaimer">Shin-Budo Kai, Inc. is a non-profit educational organization (501c) formed to disseminate the principles of Aikido and Ki. It admits students of any race, color, and national or ethnic origin.</p>
+
 			</div><!-- .site-info -->
 
     <?php
