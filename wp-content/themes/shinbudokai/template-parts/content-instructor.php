@@ -29,7 +29,7 @@
 		</figure>
 		<figure class="bottom-image">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/instructor/sensei-frame.jpg" alt="Sensei and O-Sensei" />
-			<figcaption>Above: A picture of sensei as uke for O-Sensei when he was an uchi-deshi.</figcaption>
+			<figcaption>Above: A picture of sensei as uke for O-Sensei when he was a <em>shidoin</em>.</figcaption>
 		</figure>
 	</aside><!-- #secondary -->
 
