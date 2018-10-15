@@ -52,6 +52,7 @@
 							$ID = $product->ID;
 							$name = $product->post_title;
 							$subtitle = get_field('subtitle', $ID);
+							$fullEmbed = get_field('full_embed_conditional', $ID);
 							$noImage = '<img src="' . get_template_directory_uri() . '/images/no-image.png" alt="no image placeholder" />';
 							$thumbnail = get_the_post_thumbnail($ID);
 							$image = $thumbnail ? $thumbnail : $noImage;
@@ -59,6 +60,8 @@
 							$description = $product->post_content;
 							$buyButton = get_field('buy_button', $ID);
 							$price = get_field('price', $ID);
+
+							if( $fullEmbed != 'true' ) :
 					?>
 						<div class="product">
 							<figure>
@@ -79,6 +82,13 @@
 							</div>
 						</div><!-- .product -->
 					<?php
+							else :
+					?>
+						<div class="product full-embed">
+							<?php echo $buyButton; ?>
+						</div><!-- .product -->
+					<?php
+							endif;
 						endforeach;
 					?>
 					</div><!-- .products -->
@@ -107,6 +117,7 @@
 							$ID = $product->ID;
 							$name = $product->post_title;
 							$subtitle = get_field('subtitle', $ID);
+							$fullEmbed = get_field('full_embed_conditional', $ID);
 							$noImage = '<img src="' . get_template_directory_uri() . '/images/no-image.png" alt="no image placeholder" />';
 							$thumbnail = get_the_post_thumbnail($ID);
 							$image = $thumbnail ? $thumbnail : $noImage;
@@ -114,6 +125,8 @@
 							$description = $product->post_content;
 							$buyButton = get_field('buy_button', $ID);
 							$price = get_field('price', $ID);
+
+							if( $fullEmbed != 'true' ) :
 					?>
 						<div class="product">
 							<figure>
@@ -134,6 +147,13 @@
 							</div>
 						</div><!-- .product -->
 					<?php
+							else :
+					?>
+						<div class="product full-embed">
+							<?php echo $buyButton; ?>
+						</div><!-- .product -->
+					<?php
+							endif;
 						endforeach;
 					?>
 					</div><!-- .products -->

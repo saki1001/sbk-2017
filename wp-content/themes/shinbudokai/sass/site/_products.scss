@@ -14,11 +14,13 @@
 	
 	.products {
 		@include clearfix;
+		width: 100%;
 		margin-bottom: $space;
 	}
 
 	.product {
 		@include clearfix;
+		width: 100%;
 		margin-bottom: $space-double;
 
 		figure {
@@ -70,10 +72,19 @@
 		.price {
 			margin-top: $space-double;
 		}
+
+		&.full-embed {
+			.shopify-buy-frame {
+				width: 100%;
+				max-width: 100% !important;
+				margin-right: 0;
+			}
+		}
 	}
 
 	&.list {
 		@include clearfix;
+		width: 100%;
 
 		.product {
 		}
@@ -81,6 +92,7 @@
 
 	&.grid {
 		@include clearfix;
+		width: 100%;
 
 		.product {
 		}

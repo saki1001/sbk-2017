@@ -425,18 +425,25 @@ html, body {
   .page-shop #primary {
     width: 100%;
     float: none; }
-    .page-shop #primary .featured-products.list .product {
-      content: "";
-      display: table;
-      table-layout: fixed; }
-    .page-shop #primary .featured-products.list figure {
-      width: 31.6788321168%;
-      float: left;
-      margin-right: 2.4817518248%; }
-    .page-shop #primary .featured-products.list .info {
-      width: 65.8394160584%;
-      float: right;
-      margin-right: 0; }
+    .page-shop #primary .featured-products.list {
+      width: 100%; }
+      .page-shop #primary .featured-products.list .product {
+        content: "";
+        display: table;
+        table-layout: fixed; }
+      .page-shop #primary .featured-products.list figure {
+        width: 31.6788321168%;
+        float: left;
+        margin-right: 2.4817518248%; }
+      .page-shop #primary .featured-products.list .info {
+        width: 65.8394160584%;
+        float: right;
+        margin-right: 0; }
+      .page-shop #primary .featured-products.list .product.full-embed {
+        width: 100%; }
+        .page-shop #primary .featured-products.list .product.full-embed .shopify-buy-frame {
+          max-height: 670px;
+          overflow: hidden; }
     .page-shop #primary .featured-products.grid .product {
       margin-right: 2%;
       min-height: 400px;
@@ -1245,11 +1252,13 @@ header .inner {
     content: "";
     display: table;
     table-layout: fixed;
+    width: 100%;
     margin-bottom: 16px; }
   .featured-products .product {
     content: "";
     display: table;
     table-layout: fixed;
+    width: 100%;
     margin-bottom: 32px; }
     .featured-products .product figure {
       width: 100%;
@@ -1283,14 +1292,20 @@ header .inner {
       margin-right: 16px; }
     .featured-products .product .price {
       margin-top: 32px; }
+    .featured-products .product.full-embed .shopify-buy-frame {
+      width: 100%;
+      max-width: 100% !important;
+      margin-right: 0; }
   .featured-products.list {
     content: "";
     display: table;
-    table-layout: fixed; }
+    table-layout: fixed;
+    width: 100%; }
   .featured-products.grid {
     content: "";
     display: table;
-    table-layout: fixed; }
+    table-layout: fixed;
+    width: 100%; }
 
 /*--------------------------------------------------------------
 ## Sections

@@ -203,6 +203,8 @@ html, body {
 
 			.featured-products {
 				&.list {
+					width: 100%;
+
 					.product {
 						@include clearfix;
 					}
@@ -213,6 +215,15 @@ html, body {
 
 					.info {
 						@include span(4 of 6 last);
+					}
+
+					.product.full-embed {
+						width: 100%;
+
+						.shopify-buy-frame {
+							max-height: 670px;
+							overflow: hidden;
+						}
 					}
 				}
 

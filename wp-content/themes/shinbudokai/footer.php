@@ -25,7 +25,7 @@
 
 			<div class="site-info">
 				<p>
-					77 8th Ave. (southwest corner of 14th St)<br/>
+					77 8th Ave (enter through Vet's office at 75 8th Ave)<br/>
 					New York, NY 10014
 				</p>
 
