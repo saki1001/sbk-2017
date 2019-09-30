@@ -656,6 +656,12 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+.page-size-guide table {
+  border: solid 1px #666; }
+  .page-size-guide table td {
+    border: solid 1px #666;
+    padding: 10px; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -1156,8 +1162,12 @@ header .inner {
 /*--------------------------------------------------------------
 # Shop
 --------------------------------------------------------------*/
-.page-shop .blurb strong {
+.page-shop .blurb a, .page-shop .blurb strong {
+  font-weight: bold;
   color: #dd624c; }
+
+.page-shop .blurb a {
+  text-decoration: none; }
 
 /*--------------------------------------------------------------
 ## Sidebar

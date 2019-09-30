@@ -287,8 +287,13 @@
 --------------------------------------------------------------*/
 .page-shop {
 	.blurb {
-		strong {
+		a, strong {
+			font-weight: bold;
 			color: $red;
+		}
+
+		a {
+			text-decoration: none;
 		}
 	}
 }

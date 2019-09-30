@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-sass": "^1.2.1"
+    "grunt-sass": "^1.2.1",
+    "node-sass": "^4.12.0",
+    "sass": "^1.22.12"
   },
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1"

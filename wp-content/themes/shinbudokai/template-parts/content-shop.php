@@ -21,9 +21,8 @@
 
 		<?php
 			$productSections = get_field('product_sections');
-			error_log(print_r($productSections, true));
 
-			foreach( $productSections as $productSection ) :
+			foreach( $productSections as $key => $productSection ) :
 				$layout = $productSection['acf_fc_layout'];
 				$title = $productSection['title'];
 				$blurb = $productSection['blurb'];
@@ -35,7 +34,7 @@
 					// LIST
 					case 'featured_product_list' :
 				?>
-					<section class="featured-products list" role="featured-content">
+					<section id="<?php echo 'section-' . $key; ?>" class="featured-products list" role="featured-content">
 					<h3><?php echo $title; ?></h3>
 				<?php
 					if( $blurb ) :
@@ -100,7 +99,7 @@
 					// GRID
 					case 'featured_product_grid' :
 				?>
-					<section class="featured-products grid" role="featured-content">
+					<section id="<?php echo 'section-' . $key; ?>" class="featured-products grid" role="featured-content">
 					<h3><?php echo $title; ?></h3>
 				<?php
 					if( $blurb ) :
