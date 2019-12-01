@@ -1,5 +1,5 @@
 {
-  "name": "evercore",
+  "name": "shinbudokai",
   "version": "1.0.0",
   "description": "WordPress Site",
   "main": "Gruntfile.js",
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/saki1001/sbk-2017.git"
   },
-  "author": "rayogram",
+  "author": "Saki Sato",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/saki1001/sbk-2017/issues"
