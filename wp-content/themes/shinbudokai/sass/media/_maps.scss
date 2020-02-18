@@ -7,7 +7,7 @@
 @media screen and (min-width: $desktop__min) {
 	.page-visit {
 		#map {
-			width: 80%;
+			min-height: 500px;
 		}	
 	}
 }

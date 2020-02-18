@@ -19,7 +19,7 @@
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.7397, lng: -74.002984},
+    center: {lat: 40.7264561, lng: -73.990621},
     zoom: 16,
     scrollwheel: false,
     draggable: false,
@@ -33,7 +33,7 @@ function initMap() {
   });
 
   var marker = new google.maps.Marker({
-    position: {lat: 40.7397, lng: -74.002984},
+    position: {lat: 40.7264561, lng: -73.990621},
     map: map
   });
 }

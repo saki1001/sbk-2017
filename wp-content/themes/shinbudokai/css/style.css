@@ -1012,7 +1012,7 @@ header .inner {
   clear: both;
   margin: 0 0 1.5em; }
 
-.page-template-default #primary {
+#content #primary {
   margin-top: 16px; }
 
 /*--------------------------------------------------------------
@@ -1035,6 +1035,20 @@ header .inner {
 @media screen and (min-width: 551px) {
   .home #main h2 {
     margin: 50px 0; } }
+
+/*--------------------------------------------------------------
+# News
+--------------------------------------------------------------*/
+.blog h1 a {
+  color: #404040;
+  text-decoration: none; }
+  .blog h1 a:hover {
+    color: #dd624c; }
+
+.blog article {
+  border-bottom: solid 1px #777;
+  margin-bottom: 32px;
+  padding-bottom: 32px; }
 
 /*--------------------------------------------------------------
 # Instructor
@@ -1098,6 +1112,7 @@ header .inner {
     font-weight: bold;
     text-transform: uppercase;
     text-align: right;
+    min-height: 40px;
     border-bottom: solid 1px #404040;
     padding-bottom: 4px; }
     .page-schedule #weekly-schedule .day-header p {
@@ -1483,6 +1498,6 @@ object {
 
 @media screen and (min-width: 769px) {
   .page-visit #map {
-    width: 80%; } }
+    min-height: 500px; } }
 
 /*# sourceMappingURL=style.css.map */

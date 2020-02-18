@@ -27,7 +27,7 @@
 	margin: 0 0 1.5em;
 }
 
-.page-template-default {
+#content {
 	#primary {
 		margin-top: $space;
 	}
@@ -69,6 +69,28 @@
 				margin: 50px 0;
 			}
 		}
+	}
+}
+
+/*--------------------------------------------------------------
+# News
+--------------------------------------------------------------*/
+.blog {
+	h1 {
+		a {
+			color: $black;
+			text-decoration: none;
+
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+
+	article {
+		border-bottom: solid 1px $medGray;
+		margin-bottom: $space-double;
+		padding-bottom: $space-double;
 	}
 }
 
@@ -163,6 +185,7 @@
 			font-weight: bold;
 			text-transform: uppercase;
 			text-align: right;
+			min-height: 40px;
 			border-bottom: solid 1px $black;
 			padding-bottom: 4px;
 
