@@ -4,6 +4,34 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [2.2.5] - 2019-06-04
+
+### Added
+- Added `password_protected_login_password_title` filter to allow customizing the "Password" label on the login form. Props [Jeremy Herve](https://github.com/jeherve).
+
+### Changed
+- Fix stray "and" in readme. Props [Viktor Szépe](https://github.com/szepeviktor).
+- Update Portuguese translation. Props [Jonathan Hult](https://github.com/jhult).
+- Update Russian translation. Props [Alexey Chumakov](https://github.com/achumakov).
+
+## [2.2.4] - 2019-02-22
+
+### Fixed
+Check that `$_SERVER['REMOTE_ADDR']` is set.
+
+## [2.2.3] - 2019-01-10
+
+### Fixed
+- Restrict REST-API-access only if password protection is active.
+
+### Added
+- Added viewport meta tag to login page.
+- Added `password_protected_show_login` filter.
+
+### Changed
+- Cookie name is not editable in the admin so display just for reference.
+- Use default WordPress text domain for “Remember Me” and “Log In” buttons.
+
 ## [2.2.2] - 2018-05-29
 
 ### Changed
@@ -113,7 +141,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Added 'password_protected_theme_file' filter to allow custom login templates.
-- It's now really easy to contribute to the translation of this plugin via our [Transifex page](https://www.transifex.com/projects/p/password-protected/resource/password-protected/).
 - Add option to allow logged in users.
 
 ## [1.6.2] - 2014-01-10
@@ -199,7 +226,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - First Release. If you spot any bugs or issues please [log them here](https://github.com/benhuson/password-protected/issues).
 
-[Unreleased]: https://github.com/benhuson/password-protected/compare/2.2.2...HEAD
+[Unreleased]: https://github.com/benhuson/password-protected/compare/2.2.5...HEAD
+[2.2.5]: https://github.com/benhuson/password-protected/compare/2.2.4...2.2.5
+[2.2.4]: https://github.com/benhuson/password-protected/compare/2.2.3...2.2.4
+[2.2.3]: https://github.com/benhuson/password-protected/compare/2.2.2...2.2.3
 [2.2.2]: https://github.com/benhuson/password-protected/compare/2.2.1...2.2.2
 [2.2.1]: https://github.com/benhuson/password-protected/compare/2.2...2.2.1
 [2.2]: https://github.com/benhuson/password-protected/compare/2.1...2.2

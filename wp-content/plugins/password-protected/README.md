@@ -3,23 +3,22 @@ Password Protected
 
 A very simple way to quickly password protect your WordPress site with a single password.
 
-This plugin only protects your WordPress content. It **does not protect and images or uploaded files** so if you enter and exact URL to in image file it will still be accessible.
+This plugin only protects your WordPress generated content. It **does not protect images or uploaded files** so if you enter and exact URL to in image file it will still be accessible.
 
 Features include:
 
 - Password protect your WordPress site with a single password.
 - Option to allow access to feeds.
 - Option to allow administrators access without entering password.
-- Works with Mark Jaquith's [Login Logo](http://wordpress.org/extend/plugins/login-logo/) plugin.
-- Works with the [Uber Login Logo](http://wordpress.org/plugins/uber-login-logo/) plugin.
+- Works with Mark Jaquith's [Login Logo](https://wordpress.org/plugins/login-logo/) plugin.
+- Works with the [Uber Login Logo](https://wordpress.org/plugins/uber-login-logo/) plugin.
 
 > Please note, this plugin works by setting a cookie to allow access to the site. If you are using a caching plugin or web hosting such as WP Engine that has in-built caching, you will need to configure the caching service to be disabled if the Password Protected cookie is set.
 
 Translations
 ------------
 
-If you would like to translate this plugin you can easily contribute via our [Transifex page](https://www.transifex.com/projects/p/password-protected/resource/password-protected/) - just signup for a free account.
-More instructions can be found at [wp-translations.org](http://wp-translations.org/translators-wp-translations/)
+If you would like to translate this plugin you can easily contribute at the [Translating WordPress](https://translate.wordpress.org/projects/wp-plugins/password-protected/) page. The stable plugin needs to be 95% translated for a language file to be available to download/update via WordPress.
 
 Installation
 ------------
@@ -38,8 +37,8 @@ If you are upgrading manually via FTP rather that through the WordPress automati
 Frequently Asked Questions
 --------------------------
 
-__How can I change the Wordpress logo to a different image?__  
-Install and configure the [Login Logo](http://wordpress.org/extend/plugins/login-logo/) plugin by Mark Jaquith or the [Uber Login Logo](http://wordpress.org/plugins/uber-login-logo/) plugin. This will change the logo on your password entry page AND also your admin login page.
+__How can I change the WordPress logo to a different image?__  
+Install and configure the [Login Logo](https://wordpress.org/plugins/login-logo/) plugin by Mark Jaquith or the [Uber Login Logo](https://wordpress.org/plugins/uber-login-logo/) plugin. This will change the logo on your password entry page AND also your admin login page.
 
 __How can I enable feeds while the site is password protected?__  
 In the settings, check the 'Allow Feeds' checkbox.
@@ -65,11 +64,19 @@ __How can I contribute?__
 If you can, please [fork the code](https://github.com/benhuson/password-protected) and submit a pull request via GitHub. If you're not comfortable using Git, then please just submit it to the issues link above.
 
 __How can I translate this plugin?__  
-If you would like to translate this plugin you can easily contribute via our [Transifex page](https://www.transifex.com/projects/p/password-protected/resource/password-protected/) - just signup for a free account.
-More instructions can be found at [wp-translations.org](http://wp-translations.org/translators-wp-translations/)
+If you would like to translate this plugin you can easily contribute at the [Translating WordPress](https://translate.wordpress.org/projects/wp-plugins/password-protected/) page. The stable plugin needs to be 95% translated for a language file to be available to download/update via WordPress.
 
 Upgrade Notice
 --------------
+
+### 2.2.5
+Added `password_protected_login_password_title` filter to allow customizing the "Password" label on the login form.
+
+### 2.2.4
+Check that `$_SERVER['REMOTE_ADDR']` is set.
+
+### 2.2.3
+Restrict REST-API-access only if password protection is active. Added viewport meta tag to login page.
 
 ### 2.2.2
 Fix REST option and always allow access to REST API for logged in users. Change locked admin bar icon to green.
@@ -108,7 +115,7 @@ Added 'password_protected_login_redirect' filter.
 Fix login template compatibility for WordPress 3.9
 
 ### 1.7
-Added 'password_protected_theme_file' filter and option to allow logged in users. Contribute to the translation of this plugin via our [Transifex page](https://www.transifex.com/projects/p/password-protected/resource/password-protected/).
+Added 'password_protected_theme_file' filter and option to allow logged in users.
 
 ### 1.6.2
 Allow redirection to a different URL when logging out.

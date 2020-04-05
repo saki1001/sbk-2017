@@ -13,12 +13,28 @@ class Password_Protected_Admin {
 		global $wp_version;
 
 		add_action( 'admin_init', array( $this, 'password_protected_settings' ), 5 );
+		add_action( 'admin_init', array( $this, 'add_privacy_policy' ) );
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 		add_action( 'password_protected_help_tabs', array( $this, 'help_tabs' ), 5 );
 		add_action( 'admin_notices', array( $this, 'password_protected_admin_notices' ) );
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 10, 4 );
 		add_filter( 'plugin_action_links_password-protected/password-protected.php', array( $this, 'plugin_action_links' ) );
 		add_filter( 'pre_update_option_password_protected_password', array( $this, 'pre_update_option_password_protected_password' ), 10, 2 );
+
+	}
+
+	/**
+	 * Add Privacy Policy
+	 */
+	public function add_privacy_policy() {
+
+		if ( ! function_exists( 'wp_add_privacy_policy_content' ) ) {
+			return;
+		}
+
+		$content = _x( 'The Password Protected plugin stores a cookie on successful password login containing a hashed version of the entered password. It does not store any information about the user. The cookie stored is named <code>bid_n_password_protected_auth</code> where <code>n</code> is the blog ID in a multisite network', 'privacy policy content', 'password-protected' );
+
+		wp_add_privacy_policy_content( __( 'Password Protected Plugin', 'password-protected' ), wp_kses_post( wpautop( $content, false ) ) );
 
 	}
 
@@ -267,7 +283,12 @@ class Password_Protected_Admin {
 	public function password_protected_allowed_ip_addresses_field() {
 
 		echo '<textarea name="password_protected_allowed_ip_addresses" id="password_protected_allowed_ip_addresses" rows="3" class="large-text" />' . get_option( 'password_protected_allowed_ip_addresses' ) . '</textarea>';
-		echo '<p class="description">' . esc_html__( 'Enter one IP address per line.', 'password-protected' ) . ' ' . esc_html( sprintf( __( 'Your IP is address %s.', 'password-protected' ), $_SERVER['REMOTE_ADDR'] ) ) . '</p>';
+
+		echo '<p class="description">' . esc_html__( 'Enter one IP address per line.', 'password-protected' );
+		if ( isset( $_SERVER['REMOTE_ADDR'] ) ) {
+			echo ' ' . esc_html( sprintf( __( 'Your IP is address %s.', 'password-protected' ), $_SERVER['REMOTE_ADDR'] ) );
+		}
+		echo '</p>';
 
 	}
 
