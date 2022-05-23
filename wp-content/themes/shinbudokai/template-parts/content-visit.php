@@ -21,7 +21,7 @@
 	</div><!-- #primary -->
 
 	<aside id="secondary" class="widget-area" role="complementary">
-		<a href="https://www.google.com/maps/place/Shin+Budo+Kai+Inc/@40.7264515,-73.9929278,17z/data=!3m1!4b1!4m5!3m4!1s0x89c259be461957c9:0x45e1e308c57766c0!8m2!3d40.7264515!4d-73.9907391" target="_blank">
+		<a href="https://www.google.com/maps/place/Shin-Budo+Kai,+Inc./@40.7568825,-73.9932418,15z/data=!4m5!3m4!1s0x0:0x45e1e308c57766c0!8m2!3d40.7568825!4d-73.9932418" target="_blank">
     	<div id="map"></div>
     </a>
 	</aside><!-- #secondary -->
